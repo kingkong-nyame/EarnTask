@@ -1312,3 +1312,4 @@ WHERE user.username = ?
 2025-05-18 17:53:52,296 INFO:  * Restarting with stat
 2025-05-18 17:53:54,639 WARNING:  * Debugger is active!
 2025-05-18 17:53:54,643 INFO:  * Debugger PIN: 695-393-602
+2025-05-18 17:59:49,996 INFO: 127.0.0.1 - - [18/May/2025 17:59:49] "GET /login?next=/logout HTTP/1.1" 200 -
