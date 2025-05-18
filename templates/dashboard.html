@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskEarn - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .sidebar { transition: transform 0.3s ease; }
+        .sidebar-hidden { transform: translateX(-100%); }
+        .task-card { transition: transform 0.2s; }
+        .task-card:hover { transform: scale(1.02); }
+        .alert { transition: opacity 0.5s; }
+        .progress-circle { background: conic-gradient(#3b82f6 var(--progress), #e5e7eb 0); }
+        @media (max-width: 768px) {
+            .sidebar { position: fixed; top: 0; left: 0; height: 100%; z-index: 1000; }
+            .sidebar-hidden { display: none; }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar bg-blue-600 text-white w-64 p-4 md:w-1/5 md:block sidebar-hidden">
+        <div class="flex items-center mb-6">
+            <h1 class="text-2xl font-bold">TaskEarn</h1>
+            <button id="close-sidebar" class="md:hidden ml-auto text-white"><i class="fas fa-times"></i></button>
+        </div>
+        <nav class="space-y-4">
+            <a href="{{ url_for('dashboard') }}" class="block text-white bg-blue-700 p-2 rounded"><i class="fas fa-home mr-2"></i>Dashboard</a>
+            <a href="{{ url_for('profile') }}" class="block text-white hover:bg-blue-700 p-2 rounded"><i class="fas fa-user mr-2"></i>Profile</a>
+            {% if current_user.is_admin %}
+                <a href="{{ url_for('admin_withdrawals') }}" class="block text-white hover:bg-blue-700 p-2 rounded"><i class="fas fa-money-check-alt mr-2"></i>Admin Withdrawals</a>
+            {% endif %}
+            <a href="{{ url_for('logout') }}" class="block text-white hover:bg-blue-700 p-2 rounded"><i class="fas fa-sign-out-alt mr-2"></i>Logout</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="md:ml-1/5">
+        <header class="bg-blue-600 text-white p-4 md:hidden">
+            <button id="open-sidebar" class="text-white"><i class="fas fa-bars"></i></button>
+        </header>
+        <main class="container mx-auto p-4">
+            <h2 class="text-2xl font-semibold mb-4">Welcome, {{ user.username }}!</h2>
+            <div class="bg-white p-4 rounded-lg shadow mb-6">
+                <div class="flex items-center justify-between flex-col md:flex-row">
+                    <div class="mb-4 md:mb-0">
+                        <p class="text-lg">Balance: <span class="font-bold">GH₵{{ user.balance }}</span></p>
+                        <p class="text-lg">Tasks Completed: {{ user.tasks | selectattr('completed') | list | length }} / 7</p>
+                        <p class="text-lg">Current Day: Day {{ current_task_day }} of 7</p>
+                    </div>
+                    <div class="relative w-16 h-16">
+                        <div class="progress-circle w-full h-full rounded-full flex items-center justify-center text-blue-600 font-bold" style="--progress: {{ (user.tasks | selectattr('completed') | list | length) / 7 * 360 }}deg;">
+                            {{ (user.tasks | selectattr('completed') | list | length) * 14.29 | round(0) }}%
+                        </div>
+                    </div>
+                </div>
+                <!-- Withdrawal Form -->
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold mb-2">Withdraw Funds</h3>
+                    <form method="POST" action="{{ url_for('withdraw') }}">
+                        {{ form.hidden_tag() }}
+                        <div class="flex items-center space-x-2">
+                            {{ form.amount(class="w-1/2 p-2 border rounded", placeholder="Amount (min GH₵10)") }}
+                            {{ form.submit(class="bg-yellow-400 text-blue-900 px-4 py-2 rounded hover:bg-yellow-500") }}
+                        </div>
+                        {% for error in form.amount.errors %}
+                            <span class="text-red-500">{{ error }}</span>
+                        {% endfor %}
+                    </form>
+                </div>
+            </div>
+
+            <!-- Flash Messages -->
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div id="flash-alert" class="alert bg-green-500 text-white p-4 rounded-lg mb-4 flex justify-between items-center">
+                        <span>{{ messages[0] }}</span>
+                        <button onclick="this.parentElement.style.opacity='0'; setTimeout(() => this.parentElement.remove(), 500)" class="text-white"><i class="fas fa-times"></i></button>
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <!-- Active Tasks -->
+            <h3 class="text-xl font-semibold mb-4">Active Task (Day {{ current_task_day }})</h3>
+            <div class="grid grid-cols-1 gap-4">
+                {% for task in tasks %}
+                    <div class="task-card bg-white p-4 rounded-lg shadow">
+                        <div class="flex justify-between items-center">
+                            <h4 class="text-lg font-semibold">{{ task.name }}</h4>
+                            <span class="text-sm text-gray-500">{{ 'Completed' if task.status.completed else 'In Progress' }}</span>
+                        </div>
+                        <p class="text-gray-600">{{ task.description }}</p>
+                        <p class="text-green-600 font-bold mt-2">Reward: GH₵{{ task.reward }}</p>
+                        <button onclick="toggleDetails('details-{{ task.id }}')" class="text-blue-600 hover:text-blue-800 mt-2 flex items-center">
+                            <i class="fas fa-chevron-down mr-2"></i>Show Details
+                        </button>
+                        <div id="details-{{ task.id }}" class="hidden mt-4">
+                            {% if task.id in [1, 2, 3, 4, 5, 6] %}
+                                <p class="text-gray-700 mb-2">Complete the following actions:</p>
+                                <div class="space-y-2">
+                                    {% for platform, data in task.details.items() %}
+                                        <a href="{{ data.url }}" target="_blank" class="social-link block bg-blue-500 text-white text-center px-4 py-2 rounded hover:bg-blue-600 {% if task.status[platform + '_clicked'] %} bg-green-500 {% endif %}" data-task-id="{{ task.id }}" data-platform="{{ platform }}" onclick="trackLinkClick({{ task.id }}, '{{ platform }}')">
+                                            <i class="fab fa-{{ platform }} mr-2"></i>{{ platform | capitalize }}: {{ data.actions }}
+                                        </a>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                <p class="text-gray-700">{{ task.details.instructions }}</p>
+                                <div class="mt-2">
+                                    <label for="cipher-solution-{{ task.id }}" class="block text-gray-700">Enter your solution:</label>
+                                    <input type="text" id="cipher-solution-{{ task.id }}" name="cipher_solution" class="w-full p-2 border rounded" placeholder="Enter plaintext here">
+                                </div>
+                                <p class="text-gray-600 italic mt-2">Note: This task is extremely challenging and may require advanced quantum cryptographic knowledge.</p>
+                            {% endif %}
+                        </div>
+                        <form method="POST" action="{{ url_for('complete_task', task_id=task.id) }}" class="mt-4">
+                            {% if task.id == 7 %}
+                                <input type="hidden" name="cipher_solution" id="cipher-solution-hidden-{{ task.id }}">
+                            {% endif %}
+                            <button type="submit" id="complete-task-{{ task.id }}" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 {% if task.id in [1, 2, 3, 4, 5, 6] and not (task.status.get('tiktok_clicked', True) and task.status.get('instagram_clicked', True) and task.status.get('youtube_clicked', True) and task.status.get('twitter_clicked', True) and task.status.get('linkedin_clicked', True) and task.status.get('snapchat_clicked', True)) %} disabled:opacity-50 disabled:cursor-not-allowed {% endif %}" {% if task.id in [1, 2, 3, 4, 5, 6] and not (task.status.get('tiktok_clicked', True) and task.status.get('instagram_clicked', True) and task.status.get('youtube_clicked', True) and task.status.get('twitter_clicked', True) and task.status.get('linkedin_clicked', True) and task.status.get('snapchat_clicked', True)) %} disabled {% endif %} onclick="if ({{ task.id }} == 7) document.getElementById('cipher-solution-hidden-{{ task.id }}').value = document.getElementById('cipher-solution-{{ task.id }}').value;" {% if task.status.completed %} disabled {% endif %}>Complete Task</button>
+                        </form>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <!-- Task History -->
+            <h3 class="text-xl font-semibold mb-4 mt-8">Task History</h3>
+            {% if completed_tasks %}
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="border-b">
+                                <th class="py-2">Task Name</th>
+                                <th class="py-2">Reward</th>
+                                <th class="py-2">Completed At</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for task in completed_tasks %}
+                                <tr class="border-b">
+                                    <td class="py-2">{{ task.name }}</td>
+                                    <td class="py-2">GH₵{{ task.reward }}</td>
+                                    <td class="py-2">{{ task.completed_at }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <p class="text-gray-600">No tasks completed yet. Start earning now!</p>
+            {% endif %}
+        </main>
+    </div>
+
+    <script>
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            const button = details.previousElementSibling;
+            if (details.classList.contains('hidden')) {
+                details.classList.remove('hidden');
+                button.innerHTML = '<i class="fas fa-chevron-up mr-2"></i>Hide Details';
+            } else {
+                details.classList.add('hidden');
+                button.innerHTML = '<i class="fas fa-chevron-down mr-2"></i>Show Details';
+            }
+        }
+
+        function trackLinkClick(taskId, platform) {
+            fetch('/track_link/' + taskId + '/' + platform, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    document.querySelector(`.social-link[data-task-id="${taskId}"][data-platform="${platform}"]`).classList.remove('bg-blue-500');
+                    document.querySelector(`.social-link[data-task-id="${taskId}"][data-platform="${platform}"]`).classList.add('bg-green-500');
+                    if (taskId >= 1 && taskId <= 6) {
+                        const task = document.querySelector(`#complete-task-${taskId}`);
+                        const links = document.querySelectorAll(`.social-link[data-task-id="${taskId}"]`);
+                        let allClicked = true;
+                        links.forEach(link => {
+                            if (!link.classList.contains('bg-green-500')) {
+                                allClicked = false;
+                            }
+                        });
+                        if (allClicked) {
+                            task.disabled = false;
+                            task.classList.remove('opacity-50', 'cursor-not-allowed');
+                        }
+                    }
+                }
+            });
+        }
+
+        document.getElementById('open-sidebar').addEventListener('click', () => {
+            document.getElementById('sidebar').classList.remove('sidebar-hidden');
+        });
+        document.getElementById('close-sidebar').addEventListener('click', () => {
+            document.getElementById('sidebar').classList.add('sidebar-hidden');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskEarn - Admin Withdrawals</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .sidebar { transition: transform 0.3s ease; }
+        .sidebar-hidden { transform: translateX(-100%); }
+        .alert { transition: opacity 0.5s; }
+        @media (max-width: 768px) {
+            .sidebar { position: fixed; top: 0; left: 0; height: 100%; z-index: 1000; }
+            .sidebar-hidden { display: none; }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar bg-blue-600 text-white w-64 p-4 md:w-1/5 md:block sidebar-hidden">
+        <div class="flex items-center mb-6">
+            <h1 class="text-2xl font-bold">TaskEarn</h1>
+            <button id="close-sidebar" class="md:hidden ml-auto text-white"><i class="fas fa-times"></i></button>
+        </div>
+        <nav class="space-y-4">
+            <a href="{{ url_for('dashboard') }}" class="block text-white hover:bg-blue-700 p-2 rounded"><i class="fas fa-home mr-2"></i>Dashboard</a>
+            <a href="{{ url_for('profile') }}" class="block text-white hover:bg-blue-700 p-2 rounded"><i class="fas fa-user mr-2"></i>Profile</a>
+            <a href="{{ url_for('admin_withdrawals') }}" class="block text-white bg-blue-700 p-2 rounded"><i class="fas fa-money-check-alt mr-2"></i>Admin Withdrawals</a>
+            <a href="{{ url_for('logout') }}" class="block text-white hover:bg-blue-700 p-2 rounded"><i class="fas fa-sign-out-alt mr-2"></i>Logout</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="md:ml-1/5">
+        <header class="bg-blue-600 text-white p-4 md:hidden">
+            <button id="open-sidebar" class="text-white"><i class="fas fa-bars"></i></button>
+        </header>
+        <main class="container mx-auto p-4">
+            <h2 class="text-2xl font-semibold mb-4">Admin - Manage Withdrawals</h2>
+
+            <!-- Flash Messages -->
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div id="flash-alert" class="alert bg-green-500 text-white p-4 rounded-lg mb-4 flex justify-between items-center">
+                        <span>{{ messages[0] }}</span>
+                        <button onclick="this.parentElement.style.opacity='0'; setTimeout(() => this.parentElement.remove(), 500)" class="text-white"><i class="fas fa-times"></i></button>
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <!-- Withdrawal Requests -->
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h3 class="text-xl font-semibold mb-4">Withdrawal Requests</h3>
+                {% if withdrawals %}
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="border-b">
+                                <th class="py-2">User</th>
+                                <th class="py-2">Amount</th>
+                                <th class="py-2">Status</th>
+                                <th class="py-2">Requested At</th>
+                                <th class="py-2">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for withdrawal in withdrawals %}
+                                <tr class="border-b">
+                                    <td class="py-2">{{ withdrawal.user.username }}</td>
+                                    <td class="py-2">${{ withdrawal.amount }}</td>
+                                    <td class="py-2">{{ withdrawal.status | capitalize }}</td>
+                                    <td class="py-2">{{ withdrawal.requested_at.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+                                    <td class="py-2">
+                                        {% if withdrawal.status == 'pending' %}
+                                            <form method="POST">
+                                                <input type="hidden" name="withdrawal_id" value="{{ withdrawal.id }}">
+                                                <button type="submit" name="action" value="approve" class="bg-green-500 text-white px-2 py-1 rounded hover:bg-green-600">Approve</button>
+                                                <button type="submit" name="action" value="reject" class="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600">Reject</button>
+                                            </form>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                {% else %}
+                    <p class="text-gray-600">No withdrawal requests.</p>
+                {% endif %}
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Sidebar toggle for mobile
+        document.getElementById('open-sidebar').addEventListener('click', () => {
+            document.getElementById('sidebar').classList.remove('sidebar-hidden');
+        });
+        document.getElementById('close-sidebar').addEventListener('click', () => {
+            document.getElementById('sidebar').classList.add('sidebar-hidden');
+        });
+    </script>
+</body>
+</html>

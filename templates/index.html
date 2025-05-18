@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskEarn - Earn Money with Simple Tasks</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .hero-bg { background: linear-gradient(to right, #3b82f6, #1e3a8a); }
+        .animate-pulse-slow { animation: pulse 3s infinite; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.8; } 100% { opacity: 1; } }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Promotional Banner -->
+    <div class="bg-yellow-400 text-center py-2 text-white">
+        <p class="text-lg font-semibold">🎉 Sign up today and get a <span class="font-bold">GH₵5 bonus!</span></p>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">TaskEarn</h1>
+            <nav class="space-x-4">
+                <a href="{{ url_for('login') }}" class="text-white hover:underline">Login</a>
+                <a href="{{ url_for('register') }}" class="text-white hover:underline">Register</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-16">
+        <div class="container mx-auto text-center px-4">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 animate-pulse-slow">Earn Money with TaskEarn</h2>
+            <p class="text-lg md:text-xl mb-6">Complete simple tasks like engaging with social media or solving challenges and earn real cash on your mobile!</p>
+            <div class="space-x-4">
+                <a href="{{ url_for('register') }}" class="bg-yellow-400 text-blue-900 px-6 py-3 rounded-full text-lg font-semibold hover:bg-yellow-500">Get Started</a>
+                <a href="{{ url_for('login') }}" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-white hover:text-blue-900">Log In</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-semibold text-center mb-8">How It Works</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <i class="fas fa-user-plus text-4xl text-blue-600 mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-2">Sign Up</h4>
+                    <p class="text-gray-600">Create an account and get a GH₵5 bonus to start earning immediately.</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-tasks text-4xl text-blue-600 mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-2">Complete Tasks</h4>
+                    <p class="text-gray-600">Engage with social media or tackle challenging puzzles to earn rewards.</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-wallet text-4xl text-blue-600 mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-2">Earn Money</h4>
+                    <p class="text-gray-600">Watch your balance grow and withdraw your earnings.</p>
+                </div>
+            </div>
+        </section>
+
+    <!-- Tasks Preview Section -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-semibold text-center mb-8">Explore Our Tasks</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h4 class="text-xl font-semibold mb-2">Social Media Engagement</h4>
+                    <p class="text-gray-600 mb-4">Boost your favorite platforms by following, liking, and commenting. Earn GH₵20 per task!</p>
+                    <div class="flex space-x-4 justify-center">
+                        <i class="fab fa-tiktok text-2xl text-gray-600"></i>
+                        <i class="fab fa-instagram text-2xl text-gray-600"></i>
+                        <i class="fab fa-youtube text-2xl text-gray-600"></i>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h4 class="text-xl font-semibold mb-2">Decode Unbreakable Cipher</h4>
+                    <p class="text-gray-600 mb-4">Test your cryptographic skills with a complex Vigenère cipher. Earn GH₵30 if you crack it!</p>
+                    <i class="fas fa-lock text-2xl text-gray-600 text-center block"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-blue-600 text-white py-12">
+        <div class="container mx-auto text-center px-4">
+            <h3 class="text-3xl font-semibold mb-4">Ready to Start Earning?</h3>
+            <p class="text-lg mb-6">Join thousands of users earning money with TaskEarn. Sign up now and claim your GH₵5 bonus!</p>
+            <a href="{{ url_for('register') }}" class="bg-yellow-400 text-blue-900 px-6 py-3 rounded-full text-lg font-semibold hover:bg-yellow-500">Join Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 TaskEarn. All rights reserved.</p>
+            <div class="mt-2 space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

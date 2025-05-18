@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskEarn - Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .sidebar { transition: transform 0.3s ease; }
+        .sidebar-hidden { transform: translateX(-100%); }
+        .alert { transition: opacity 0.5s; }
+        @media (max-width: 768px) {
+            .sidebar { position: fixed; top: 0; left: 0; height: 100%; z-index: 1000; }
+            .sidebar-hidden { display: none; }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar bg-blue-600 text-white w-64 p-4 md:w-1/5 md:block sidebar-hidden">
+        <div class="flex items-center mb-6">
+            <h1 class="text-2xl font-bold">TaskEarn</h1>
+            <button id="close-sidebar" class="md:hidden ml-auto text-white"><i class="fas fa-times"></i></button>
+        </div>
+        <nav class="space-y-4">
+            <a href="{{ url_for('dashboard') }}" class="block text-white hover:bg-blue-700 p-2 rounded"><i class="fas fa-home mr-2"></i>Dashboard</a>
+            <a href="{{ url_for('profile') }}" class="block text-white bg-blue-700 p-2 rounded"><i class="fas fa-user mr-2"></i>Profile</a>
+            {% if current_user.is_admin %}
+                <a href="{{ url_for('admin_withdrawals') }}" class="block text-white hover:bg-blue-700 p-2 rounded"><i class="fas fa-money-check-alt mr-2"></i>Admin Withdrawals</a>
+            {% endif %}
+            <a href="{{ url_for('logout') }}" class="block text-white hover:bg-blue-700 p-2 rounded"><i class="fas fa-sign-out-alt mr-2"></i>Logout</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="md:ml-1/5">
+        <header class="bg-blue-600 text-white p-4 md:hidden">
+            <button id="open-sidebar" class="text-white"><i class="fas fa-bars"></i></button>
+        </header>
+        <main class="container mx-auto p-4">
+            <h2 class="text-2xl font-semibold mb-4">Profile</h2>
+
+            <!-- Flash Messages -->
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div id="flash-alert" class="alert bg-green-500 text-white p-4 rounded-lg mb-4 flex justify-between items-center">
+                        <span>{{ messages[0] }}</span>
+                        <button onclick="this.parentElement.style.opacity='0'; setTimeout(() => this.parentElement.remove(), 500)" class="text-white"><i class="fas fa-times"></i></button>
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <!-- Profile Picture -->
+            <div class="bg-white p-4 rounded-lg shadow mb-6">
+                <h3 class="text-xl font-semibold mb-4">Profile Picture</h3>
+                <div class="flex items-center space-x-4">
+                    {% if user.profile_picture %}
+                        <img src="{{ url_for('static', filename='uploads/' + user.profile_picture) }}" alt="Profile Picture" class="w-24 h-24 rounded-full object-cover">
+                    {% else %}
+                        <div class="w-24 h-24 rounded-full bg-gray-300 flex items-center justify-center text-gray-600">
+                            <i class="fas fa-user text-3xl"></i>
+                        </div>
+                    {% endif %}
+                    <form method="POST" enctype="multipart/form-data">
+                        {{ form.hidden_tag() }}
+                        <input type="file" name="profile_picture" accept=".png,.jpg,.jpeg" class="mt-2">
+                        <button type="submit" class="mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Upload</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Update Username and Password -->
+            <div class="bg-white p-4 rounded-lg shadow mb-6">
+                <h3 class="text-xl font-semibold mb-4">Update Profile</h3>
+                <form method="POST">
+                    {{ form.hidden_tag() }}
+                    <div class="mb-4">
+                        <label for="username" class="block text-gray-700">Username</label>
+                        {{ form.username(class="w-full p-2 border rounded", value=user.username) }}
+                        {% for error in form.username.errors %}
+                            <span class="text-red-500">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="mb-4">
+                        <label for="current_password" class="block text-gray-700">Current Password</label>
+                        {{ form.current_password(class="w-full p-2 border rounded") }}
+                        {% for error in form.current_password.errors %}
+                            <span class="text-red-500">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="mb-4">
+                        <label for="new_password" class="block text-gray-700">New Password</label>
+                        {{ form.new_password(class="w-full p-2 border rounded") }}
+                        {% for error in form.new_password.errors %}
+                            <span class="text-red-500">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    {{ form.submit(class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700") }}
+                </form>
+            </div>
+
+            <!-- Withdrawal History -->
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h3 class="text-xl font-semibold mb-4">Withdrawal History</h3>
+                {% if withdrawals %}
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="border-b">
+                                <th class="py-2">Amount</th>
+                                <th class="py-2">Status</th>
+                                <th class="py-2">Requested At</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for withdrawal in withdrawals %}
+                                <tr class="border-b">
+                                    <td class="py-2">${{ withdrawal.amount }}</td>
+                                    <td class="py-2">{{ withdrawal.status | capitalize }}</td>
+                                    <td class="py-2">{{ withdrawal.requested_at.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                {% else %}
+                    <p class="text-gray-600">No withdrawals requested yet.</p>
+                {% endif %}
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Sidebar toggle for mobile
+        document.getElementById('open-sidebar').addEventListener('click', () => {
+            document.getElementById('sidebar').classList.remove('sidebar-hidden');
+        });
+        document.getElementById('close-sidebar').addEventListener('click', () => {
+            document.getElementById('sidebar').classList.add('sidebar-hidden');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1314 @@
+2025-05-12 09:57:55,228 WARNING:  * Debugger is active!
+2025-05-12 09:57:55,238 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 10:01:23,437 ERROR: Error loading user 3: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_verified AS user_is_verified, user.verification_token AS user_verification_token, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.id = ?]
+[parameters: (3,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 10:01:23,441 INFO: 127.0.0.1 - - [12/May/2025 10:01:23] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-12 10:01:23,529 ERROR: Error loading user 3: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_verified AS user_is_verified, user.verification_token AS user_verification_token, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.id = ?]
+[parameters: (3,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 10:01:23,531 INFO: 127.0.0.1 - - [12/May/2025 10:01:23] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-05-12 10:01:26,566 INFO: 127.0.0.1 - - [12/May/2025 10:01:26] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 10:01:38,578 ERROR: Login error: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_verified AS user_is_verified, user.verification_token AS user_verification_token, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('emjude', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 10:01:38,579 ERROR: Error loading user 3: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_verified AS user_is_verified, user.verification_token AS user_verification_token, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.id = ?]
+[parameters: (3,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 10:01:38,580 INFO: 127.0.0.1 - - [12/May/2025 10:01:38] "POST /login?next=/dashboard HTTP/1.1" 200 -
+2025-05-12 10:01:38,644 INFO: 127.0.0.1 - - [12/May/2025 10:01:38] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 10:01:41,865 ERROR: Error loading user 3: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_verified AS user_is_verified, user.verification_token AS user_verification_token, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.id = ?]
+[parameters: (3,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 10:01:41,867 INFO: 127.0.0.1 - - [12/May/2025 10:01:41] "GET /register HTTP/1.1" 200 -
+2025-05-12 10:01:41,908 INFO: 127.0.0.1 - - [12/May/2025 10:01:41] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 10:02:23,311 INFO: 127.0.0.1 - - [12/May/2025 10:02:23] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+2025-05-12 10:02:23,394 INFO: 127.0.0.1 - - [12/May/2025 10:02:23] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 10:02:23,582 INFO: 127.0.0.1 - - [12/May/2025 10:02:23] "GET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-05-12 10:02:23,663 INFO: 127.0.0.1 - - [12/May/2025 10:02:23] "GET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-05-12 10:02:23,722 INFO: 127.0.0.1 - - [12/May/2025 10:02:23] "GET /register?__debugger__=yes&cmd=resource&f=console.png&s=YtgPXgmx4vzPolFXguQS HTTP/1.1" 200 -
+2025-05-12 10:02:23,773 INFO: 127.0.0.1 - - [12/May/2025 10:02:23] "GET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-05-12 10:10:32,107 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 10:10:32,107 INFO: [33mPress CTRL+C to quit[0m
+2025-05-12 10:10:32,110 INFO:  * Restarting with stat
+2025-05-12 10:10:33,465 WARNING:  * Debugger is active!
+2025-05-12 10:10:33,467 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 10:11:05,774 ERROR: Failed to send email to ntigyimah7@gmail.com: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-ad22562ed61sm505116866b.31 - gsmtp')
+2025-05-12 10:11:05,776 INFO: 127.0.0.1 - - [12/May/2025 10:11:05] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-12 10:11:05,802 INFO: 127.0.0.1 - - [12/May/2025 10:11:05] "GET /login HTTP/1.1" 200 -
+2025-05-12 10:11:16,894 INFO: 127.0.0.1 - - [12/May/2025 10:11:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 10:11:30,207 INFO: 127.0.0.1 - - [12/May/2025 10:11:30] "POST /login HTTP/1.1" 200 -
+2025-05-12 10:11:30,263 INFO: 127.0.0.1 - - [12/May/2025 10:11:30] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 10:11:47,556 INFO: 127.0.0.1 - - [12/May/2025 10:11:47] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-12 10:11:47,617 INFO: 127.0.0.1 - - [12/May/2025 10:11:47] "GET /resend_verification HTTP/1.1" 200 -
+2025-05-12 10:11:47,667 INFO: 127.0.0.1 - - [12/May/2025 10:11:47] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 10:16:49,372 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-12 10:16:49,807 INFO:  * Restarting with stat
+2025-05-12 10:16:52,098 WARNING:  * Debugger is active!
+2025-05-12 10:16:52,104 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 10:19:06,154 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 10:19:06,155 INFO: [33mPress CTRL+C to quit[0m
+2025-05-12 10:19:06,157 INFO:  * Restarting with stat
+2025-05-12 10:19:07,431 WARNING:  * Debugger is active!
+2025-05-12 10:19:07,434 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 10:19:49,349 INFO: 127.0.0.1 - - [12/May/2025 10:19:49] "[33mGET /resend_verification HTTP/1.1[0m" 404 -
+2025-05-12 10:19:49,399 INFO: 127.0.0.1 - - [12/May/2025 10:19:49] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 10:19:54,197 INFO: 127.0.0.1 - - [12/May/2025 10:19:54] "GET /login HTTP/1.1" 200 -
+2025-05-12 10:19:54,261 INFO: 127.0.0.1 - - [12/May/2025 10:19:54] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 10:19:56,418 INFO: 127.0.0.1 - - [12/May/2025 10:19:56] "GET /login HTTP/1.1" 200 -
+2025-05-12 10:19:56,469 INFO: 127.0.0.1 - - [12/May/2025 10:19:56] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 10:19:57,390 INFO: 127.0.0.1 - - [12/May/2025 10:19:57] "GET /register HTTP/1.1" 200 -
+2025-05-12 10:19:57,602 INFO: 127.0.0.1 - - [12/May/2025 10:19:57] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 10:19:59,968 INFO: 127.0.0.1 - - [12/May/2025 10:19:59] "GET /register HTTP/1.1" 200 -
+2025-05-12 10:20:00,026 INFO: 127.0.0.1 - - [12/May/2025 10:20:00] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 10:20:19,118 INFO: 127.0.0.1 - - [12/May/2025 10:20:19] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-12 10:20:19,130 INFO: 127.0.0.1 - - [12/May/2025 10:20:19] "GET /login HTTP/1.1" 200 -
+2025-05-12 10:20:19,207 INFO: 127.0.0.1 - - [12/May/2025 10:20:19] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 10:20:28,878 INFO: 127.0.0.1 - - [12/May/2025 10:20:28] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-12 10:20:29,034 ERROR: Dashboard error: 'form' is undefined
+2025-05-12 10:20:29,037 INFO: 127.0.0.1 - - [12/May/2025 10:20:29] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-12 10:20:29,053 INFO: 127.0.0.1 - - [12/May/2025 10:20:29] "GET / HTTP/1.1" 200 -
+2025-05-12 10:20:29,126 INFO: 127.0.0.1 - - [12/May/2025 10:20:29] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 10:20:50,835 INFO: 127.0.0.1 - - [12/May/2025 10:20:50] "GET /register HTTP/1.1" 200 -
+2025-05-12 10:20:50,925 INFO: 127.0.0.1 - - [12/May/2025 10:20:50] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 10:20:55,731 INFO: 127.0.0.1 - - [12/May/2025 10:20:55] "GET /login HTTP/1.1" 200 -
+2025-05-12 10:20:55,871 INFO: 127.0.0.1 - - [12/May/2025 10:20:55] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 10:21:06,712 INFO: 127.0.0.1 - - [12/May/2025 10:21:06] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-12 10:21:06,735 ERROR: Dashboard error: 'form' is undefined
+2025-05-12 10:21:06,736 INFO: 127.0.0.1 - - [12/May/2025 10:21:06] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-12 10:21:06,751 INFO: 127.0.0.1 - - [12/May/2025 10:21:06] "GET / HTTP/1.1" 200 -
+2025-05-12 10:21:06,859 INFO: 127.0.0.1 - - [12/May/2025 10:21:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 10:21:17,283 INFO: 127.0.0.1 - - [12/May/2025 10:21:17] "GET / HTTP/1.1" 200 -
+2025-05-12 10:21:17,338 INFO: 127.0.0.1 - - [12/May/2025 10:21:17] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 10:21:19,985 INFO: 127.0.0.1 - - [12/May/2025 10:21:19] "GET /login HTTP/1.1" 200 -
+2025-05-12 10:21:20,041 INFO: 127.0.0.1 - - [12/May/2025 10:21:20] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 11:34:08,733 INFO: 127.0.0.1 - - [12/May/2025 11:34:08] "GET /login HTTP/1.1" 200 -
+2025-05-12 11:34:08,785 INFO: 127.0.0.1 - - [12/May/2025 11:34:08] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 11:34:12,952 INFO: 127.0.0.1 - - [12/May/2025 11:34:12] "GET /register HTTP/1.1" 200 -
+2025-05-12 11:34:13,019 INFO: 127.0.0.1 - - [12/May/2025 11:34:13] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 11:34:28,271 INFO: 127.0.0.1 - - [12/May/2025 11:34:28] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-12 11:34:28,284 INFO: 127.0.0.1 - - [12/May/2025 11:34:28] "GET /register HTTP/1.1" 200 -
+2025-05-12 11:34:28,343 INFO: 127.0.0.1 - - [12/May/2025 11:34:28] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 11:34:30,943 INFO: 127.0.0.1 - - [12/May/2025 11:34:30] "GET /login HTTP/1.1" 200 -
+2025-05-12 11:34:30,994 INFO: 127.0.0.1 - - [12/May/2025 11:34:30] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 11:34:39,387 INFO: 127.0.0.1 - - [12/May/2025 11:34:39] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-12 11:34:39,419 ERROR: Dashboard error: 'form' is undefined
+2025-05-12 11:34:39,420 INFO: 127.0.0.1 - - [12/May/2025 11:34:39] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-12 11:34:39,432 INFO: 127.0.0.1 - - [12/May/2025 11:34:39] "GET / HTTP/1.1" 200 -
+2025-05-12 11:34:39,496 INFO: 127.0.0.1 - - [12/May/2025 11:34:39] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 11:34:42,639 INFO: 127.0.0.1 - - [12/May/2025 11:34:42] "GET /login HTTP/1.1" 200 -
+2025-05-12 11:34:42,697 INFO: 127.0.0.1 - - [12/May/2025 11:34:42] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 11:39:08,560 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-12 11:39:08,942 INFO:  * Restarting with stat
+2025-05-12 11:39:11,366 WARNING:  * Debugger is active!
+2025-05-12 11:39:11,369 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 11:41:04,299 INFO: 127.0.0.1 - - [12/May/2025 11:41:04] "GET /login HTTP/1.1" 200 -
+2025-05-12 11:41:04,346 INFO: 127.0.0.1 - - [12/May/2025 11:41:04] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 11:41:14,144 INFO: 127.0.0.1 - - [12/May/2025 11:41:14] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-12 11:41:14,209 ERROR: Dashboard error: 'form' is undefined
+2025-05-12 11:41:14,210 INFO: 127.0.0.1 - - [12/May/2025 11:41:14] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-12 11:41:14,224 INFO: 127.0.0.1 - - [12/May/2025 11:41:14] "GET / HTTP/1.1" 200 -
+2025-05-12 11:41:14,283 INFO: 127.0.0.1 - - [12/May/2025 11:41:14] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 11:41:17,048 INFO: 127.0.0.1 - - [12/May/2025 11:41:17] "GET /login HTTP/1.1" 200 -
+2025-05-12 11:41:17,129 INFO: 127.0.0.1 - - [12/May/2025 11:41:17] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 11:41:19,579 INFO: 127.0.0.1 - - [12/May/2025 11:41:19] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 11:41:19,632 INFO: 127.0.0.1 - - [12/May/2025 11:41:19] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 11:45:04,439 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-12 11:45:04,750 INFO:  * Restarting with stat
+2025-05-12 11:45:06,935 WARNING:  * Debugger is active!
+2025-05-12 11:45:06,941 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 11:45:08,987 INFO: 127.0.0.1 - - [12/May/2025 11:45:08] "GET / HTTP/1.1" 200 -
+2025-05-12 11:45:09,043 INFO: 127.0.0.1 - - [12/May/2025 11:45:09] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 11:45:12,645 INFO: 127.0.0.1 - - [12/May/2025 11:45:12] "GET /login HTTP/1.1" 200 -
+2025-05-12 11:45:12,730 INFO: 127.0.0.1 - - [12/May/2025 11:45:12] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 11:45:24,964 INFO: 127.0.0.1 - - [12/May/2025 11:45:24] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-12 11:45:25,023 ERROR: Dashboard error: 'form' is undefined
+2025-05-12 11:45:25,024 INFO: 127.0.0.1 - - [12/May/2025 11:45:25] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-12 11:45:25,035 INFO: 127.0.0.1 - - [12/May/2025 11:45:25] "GET / HTTP/1.1" 200 -
+2025-05-12 11:45:25,121 INFO: 127.0.0.1 - - [12/May/2025 11:45:25] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 11:48:04,012 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-12 11:48:04,400 INFO:  * Restarting with stat
+2025-05-12 11:48:06,945 WARNING:  * Debugger is active!
+2025-05-12 11:48:06,951 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 11:48:14,269 INFO: 127.0.0.1 - - [12/May/2025 11:48:14] "GET / HTTP/1.1" 200 -
+2025-05-12 11:48:14,325 INFO: 127.0.0.1 - - [12/May/2025 11:48:14] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 11:48:17,216 INFO: 127.0.0.1 - - [12/May/2025 11:48:17] "GET /login HTTP/1.1" 200 -
+2025-05-12 11:48:17,293 INFO: 127.0.0.1 - - [12/May/2025 11:48:17] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 11:48:28,616 INFO: 127.0.0.1 - - [12/May/2025 11:48:28] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-12 11:48:28,674 ERROR: Dashboard error: 'form' is undefined
+2025-05-12 11:48:28,676 INFO: 127.0.0.1 - - [12/May/2025 11:48:28] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-12 11:48:28,691 INFO: 127.0.0.1 - - [12/May/2025 11:48:28] "GET / HTTP/1.1" 200 -
+2025-05-12 11:48:28,750 INFO: 127.0.0.1 - - [12/May/2025 11:48:28] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 11:49:07,677 INFO: 127.0.0.1 - - [12/May/2025 11:49:07] "GET /register HTTP/1.1" 200 -
+2025-05-12 11:49:07,756 INFO: 127.0.0.1 - - [12/May/2025 11:49:07] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 17:28:48,655 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-12 17:28:48,966 INFO:  * Restarting with stat
+2025-05-12 17:28:50,958 WARNING:  * Debugger is active!
+2025-05-12 17:28:50,962 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 17:28:53,862 INFO: 127.0.0.1 - - [12/May/2025 17:28:53] "GET /register HTTP/1.1" 200 -
+2025-05-12 17:28:53,917 INFO: 127.0.0.1 - - [12/May/2025 17:28:53] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 17:28:56,456 INFO: 127.0.0.1 - - [12/May/2025 17:28:56] "GET /login HTTP/1.1" 200 -
+2025-05-12 17:28:56,504 INFO: 127.0.0.1 - - [12/May/2025 17:28:56] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 17:29:06,671 INFO: 127.0.0.1 - - [12/May/2025 17:29:06] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-12 17:29:06,726 ERROR: Dashboard error: 'form' is undefined
+2025-05-12 17:29:06,726 INFO: 127.0.0.1 - - [12/May/2025 17:29:06] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-12 17:29:06,742 INFO: 127.0.0.1 - - [12/May/2025 17:29:06] "GET / HTTP/1.1" 200 -
+2025-05-12 17:29:06,821 INFO: 127.0.0.1 - - [12/May/2025 17:29:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 17:29:53,306 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-12 17:29:53,572 INFO:  * Restarting with stat
+2025-05-12 17:44:49,801 WARNING:  * Debugger is active!
+2025-05-12 17:44:49,805 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 17:45:34,024 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-12 17:45:35,988 WARNING:  * Debugger is active!
+2025-05-12 17:45:35,992 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 17:47:13,568 ERROR: Error loading user 1: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.id = ?]
+[parameters: (1,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 17:47:13,570 INFO: 127.0.0.1 - - [12/May/2025 17:47:13] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-12 17:47:13,659 ERROR: Error loading user 1: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.id = ?]
+[parameters: (1,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 17:47:13,831 INFO: 127.0.0.1 - - [12/May/2025 17:47:13] "[35m[1mGET /login?next=/dashboard HTTP/1.1[0m" 500 -
+2025-05-12 17:47:13,926 INFO: 127.0.0.1 - - [12/May/2025 17:47:13] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 17:47:14,158 INFO: 127.0.0.1 - - [12/May/2025 17:47:14] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-12 17:47:14,173 INFO: 127.0.0.1 - - [12/May/2025 17:47:14] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-12 17:47:14,242 INFO: 127.0.0.1 - - [12/May/2025 17:47:14] "GET /login?__debugger__=yes&cmd=resource&f=console.png&s=MLUDkouYNleZyo5g29Ic HTTP/1.1" 200 -
+2025-05-12 17:47:14,303 INFO: 127.0.0.1 - - [12/May/2025 17:47:14] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-12 17:51:07,862 ERROR: Error loading user 1: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.id = ?]
+[parameters: (1,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 17:51:07,865 INFO: 127.0.0.1 - - [12/May/2025 17:51:07] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-05-12 17:51:07,919 INFO: 127.0.0.1 - - [12/May/2025 17:51:07] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 17:51:24,728 ERROR: Login error: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Kofi', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 17:51:24,731 ERROR: Error loading user 1: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.id = ?]
+[parameters: (1,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 17:51:24,733 INFO: 127.0.0.1 - - [12/May/2025 17:51:24] "POST /login?next=/dashboard HTTP/1.1" 200 -
+2025-05-12 17:51:24,795 INFO: 127.0.0.1 - - [12/May/2025 17:51:24] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 17:53:13,795 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 17:53:13,797 INFO: [33mPress CTRL+C to quit[0m
+2025-05-12 17:53:13,799 INFO:  * Restarting with stat
+2025-05-12 17:53:15,196 WARNING:  * Debugger is active!
+2025-05-12 17:53:15,198 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 17:53:26,014 ERROR: Error loading user 1: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.id = ?]
+[parameters: (1,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 17:53:26,017 INFO: 127.0.0.1 - - [12/May/2025 17:53:26] "GET / HTTP/1.1" 200 -
+2025-05-12 17:53:26,085 INFO: 127.0.0.1 - - [12/May/2025 17:53:26] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 17:53:28,824 ERROR: Error loading user 1: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.id = ?]
+[parameters: (1,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 17:53:28,825 INFO: 127.0.0.1 - - [12/May/2025 17:53:28] "GET /login HTTP/1.1" 200 -
+2025-05-12 17:53:28,878 INFO: 127.0.0.1 - - [12/May/2025 17:53:28] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 17:53:39,427 ERROR: Login error: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Kofi', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 17:53:39,429 ERROR: Error loading user 1: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.id = ?]
+[parameters: (1,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 17:53:39,430 INFO: 127.0.0.1 - - [12/May/2025 17:53:39] "POST /login HTTP/1.1" 200 -
+2025-05-12 17:53:39,479 INFO: 127.0.0.1 - - [12/May/2025 17:53:39] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 17:58:01,839 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-12 17:58:02,046 INFO:  * Restarting with stat
+2025-05-12 17:58:03,825 WARNING:  * Debugger is active!
+2025-05-12 17:58:03,830 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 17:58:08,032 ERROR: Login error: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Kofi', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 17:58:08,052 ERROR: Error loading user 1: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.id = ?]
+[parameters: (1,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 17:58:08,056 INFO: 127.0.0.1 - - [12/May/2025 17:58:08] "POST /login HTTP/1.1" 200 -
+2025-05-12 17:58:08,103 INFO: 127.0.0.1 - - [12/May/2025 17:58:08] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 17:58:16,621 ERROR: Login error: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Kofi', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 17:58:16,623 ERROR: Error loading user 1: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.id = ?]
+[parameters: (1,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 17:58:16,625 INFO: 127.0.0.1 - - [12/May/2025 17:58:16] "POST /login HTTP/1.1" 200 -
+2025-05-12 17:58:16,662 INFO: 127.0.0.1 - - [12/May/2025 17:58:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 17:58:27,578 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 17:58:27,579 INFO: [33mPress CTRL+C to quit[0m
+2025-05-12 17:58:27,581 INFO:  * Restarting with stat
+2025-05-12 17:58:29,140 WARNING:  * Debugger is active!
+2025-05-12 17:58:29,143 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 17:58:37,942 ERROR: Error loading user 1: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.id = ?]
+[parameters: (1,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 17:58:37,943 INFO: 127.0.0.1 - - [12/May/2025 17:58:37] "GET / HTTP/1.1" 200 -
+2025-05-12 17:58:37,986 INFO: 127.0.0.1 - - [12/May/2025 17:58:37] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 17:58:40,011 ERROR: Error loading user 1: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.id = ?]
+[parameters: (1,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 17:58:40,013 INFO: 127.0.0.1 - - [12/May/2025 17:58:40] "GET /login HTTP/1.1" 200 -
+2025-05-12 17:58:40,097 INFO: 127.0.0.1 - - [12/May/2025 17:58:40] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 17:58:49,395 ERROR: Login error: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Kofi', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 17:58:49,397 ERROR: Error loading user 1: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.id = ?]
+[parameters: (1,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 17:58:49,398 INFO: 127.0.0.1 - - [12/May/2025 17:58:49] "POST /login HTTP/1.1" 200 -
+2025-05-12 17:58:49,450 INFO: 127.0.0.1 - - [12/May/2025 17:58:49] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 17:59:16,442 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-12 17:59:16,754 INFO:  * Restarting with stat
+2025-05-12 17:59:18,298 WARNING:  * Debugger is active!
+2025-05-12 17:59:18,303 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 17:59:20,808 ERROR: Login error: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Kofi', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 17:59:20,910 INFO: 127.0.0.1 - - [12/May/2025 17:59:20] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2025-05-12 17:59:21,071 INFO: 127.0.0.1 - - [12/May/2025 17:59:21] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 17:59:21,504 INFO: 127.0.0.1 - - [12/May/2025 17:59:21] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-12 17:59:21,513 INFO: 127.0.0.1 - - [12/May/2025 17:59:21] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-12 17:59:21,569 INFO: 127.0.0.1 - - [12/May/2025 17:59:21] "GET /login?__debugger__=yes&cmd=resource&f=console.png&s=oav5Y1AGHtrEkXgW7SI7 HTTP/1.1" 200 -
+2025-05-12 17:59:21,622 INFO: 127.0.0.1 - - [12/May/2025 17:59:21] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-12 18:00:18,716 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-12 18:00:18,928 INFO:  * Restarting with stat
+2025-05-12 18:00:20,338 WARNING:  * Debugger is active!
+2025-05-12 18:00:20,341 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 18:00:24,440 ERROR: Login error: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Kofi', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 18:00:24,458 ERROR: Error loading user 1: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.id = ?]
+[parameters: (1,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 18:00:24,459 INFO: 127.0.0.1 - - [12/May/2025 18:00:24] "POST /login HTTP/1.1" 200 -
+2025-05-12 18:00:31,187 INFO: 127.0.0.1 - - [12/May/2025 18:00:31] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:01:52,841 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-12 18:01:53,011 INFO:  * Restarting with stat
+2025-05-12 18:01:54,749 WARNING:  * Debugger is active!
+2025-05-12 18:01:54,753 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 18:02:02,973 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 18:02:02,973 INFO: [33mPress CTRL+C to quit[0m
+2025-05-12 18:02:02,975 INFO:  * Restarting with stat
+2025-05-12 18:02:04,395 WARNING:  * Debugger is active!
+2025-05-12 18:02:04,397 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 18:02:09,357 ERROR: Login error: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Kofi', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 18:02:09,778 INFO: 127.0.0.1 - - [12/May/2025 18:02:09] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2025-05-12 18:02:09,859 INFO: 127.0.0.1 - - [12/May/2025 18:02:09] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:02:10,024 INFO: 127.0.0.1 - - [12/May/2025 18:02:10] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-12 18:02:10,052 INFO: 127.0.0.1 - - [12/May/2025 18:02:10] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-12 18:02:10,138 INFO: 127.0.0.1 - - [12/May/2025 18:02:10] "GET /login?__debugger__=yes&cmd=resource&f=console.png&s=Sb5LOqCXuzGmj1DizItm HTTP/1.1" 200 -
+2025-05-12 18:02:10,222 INFO: 127.0.0.1 - - [12/May/2025 18:02:10] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-12 18:02:25,614 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-12 18:02:25,788 INFO:  * Restarting with stat
+2025-05-12 18:02:27,535 WARNING:  * Debugger is active!
+2025-05-12 18:02:27,540 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 18:02:29,035 ERROR: Login error: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Kofi', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 18:02:29,049 ERROR: Error loading user 1: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.id = ?]
+[parameters: (1,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 18:02:29,050 INFO: 127.0.0.1 - - [12/May/2025 18:02:29] "POST /login HTTP/1.1" 200 -
+2025-05-12 18:02:29,113 INFO: 127.0.0.1 - - [12/May/2025 18:02:29] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:02:37,316 ERROR: Login error: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Kofi', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 18:02:37,317 ERROR: Error loading user 1: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.id = ?]
+[parameters: (1,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 18:02:37,318 INFO: 127.0.0.1 - - [12/May/2025 18:02:37] "POST /login HTTP/1.1" 200 -
+2025-05-12 18:02:37,384 INFO: 127.0.0.1 - - [12/May/2025 18:02:37] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:03:04,784 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-12 18:03:04,961 INFO:  * Restarting with stat
+2025-05-12 18:03:47,990 INFO:  * Restarting with stat
+2025-05-12 18:06:05,507 INFO:  * Restarting with stat
+2025-05-12 18:10:54,293 INFO:  * Restarting with stat
+2025-05-12 18:10:55,886 WARNING:  * Debugger is active!
+2025-05-12 18:10:55,891 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 18:13:14,930 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 18:13:14,933 INFO: [33mPress CTRL+C to quit[0m
+2025-05-12 18:13:14,937 INFO:  * Restarting with stat
+2025-05-12 18:13:16,497 WARNING:  * Debugger is active!
+2025-05-12 18:13:16,500 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 18:13:33,952 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 18:13:33,953 INFO: [33mPress CTRL+C to quit[0m
+2025-05-12 18:13:33,956 INFO:  * Restarting with stat
+2025-05-12 18:13:35,256 WARNING:  * Debugger is active!
+2025-05-12 18:13:35,260 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 18:13:40,152 ERROR: Login error: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('Kofi', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 18:13:40,170 ERROR: Error loading user 1: (sqlite3.OperationalError) no such column: user.email
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin 
+FROM user 
+WHERE user.id = ?]
+[parameters: (1,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-12 18:13:40,172 INFO: 127.0.0.1 - - [12/May/2025 18:13:40] "POST /login HTTP/1.1" 200 -
+2025-05-12 18:13:40,240 INFO: 127.0.0.1 - - [12/May/2025 18:13:40] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:14:00,122 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 18:14:00,122 INFO: [33mPress CTRL+C to quit[0m
+2025-05-12 18:14:00,126 INFO:  * Restarting with stat
+2025-05-12 18:14:01,530 WARNING:  * Debugger is active!
+2025-05-12 18:14:01,534 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 18:14:05,921 INFO: 127.0.0.1 - - [12/May/2025 18:14:05] "POST /login HTTP/1.1" 200 -
+2025-05-12 18:14:05,973 INFO: 127.0.0.1 - - [12/May/2025 18:14:05] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:14:09,710 INFO: 127.0.0.1 - - [12/May/2025 18:14:09] "GET /register HTTP/1.1" 200 -
+2025-05-12 18:14:09,769 INFO: 127.0.0.1 - - [12/May/2025 18:14:09] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:14:29,194 INFO: 127.0.0.1 - - [12/May/2025 18:14:29] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-12 18:14:29,209 INFO: 127.0.0.1 - - [12/May/2025 18:14:29] "GET /login HTTP/1.1" 200 -
+2025-05-12 18:14:29,308 INFO: 127.0.0.1 - - [12/May/2025 18:14:29] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:14:40,896 INFO: 127.0.0.1 - - [12/May/2025 18:14:40] "POST /login HTTP/1.1" 200 -
+2025-05-12 18:14:40,962 INFO: 127.0.0.1 - - [12/May/2025 18:14:40] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:14:47,625 INFO: 127.0.0.1 - - [12/May/2025 18:14:47] "GET /register HTTP/1.1" 200 -
+2025-05-12 18:14:47,682 INFO: 127.0.0.1 - - [12/May/2025 18:14:47] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:14:52,593 INFO: 127.0.0.1 - - [12/May/2025 18:14:52] "GET /login HTTP/1.1" 200 -
+2025-05-12 18:14:52,660 INFO: 127.0.0.1 - - [12/May/2025 18:14:52] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:15:02,403 INFO: 127.0.0.1 - - [12/May/2025 18:15:02] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-12 18:15:02,594 ERROR: Dashboard error: 'form' is undefined
+2025-05-12 18:15:02,595 INFO: 127.0.0.1 - - [12/May/2025 18:15:02] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-12 18:15:02,614 INFO: 127.0.0.1 - - [12/May/2025 18:15:02] "GET / HTTP/1.1" 200 -
+2025-05-12 18:15:02,710 INFO: 127.0.0.1 - - [12/May/2025 18:15:02] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:23:17,555 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 18:23:17,555 INFO: [33mPress CTRL+C to quit[0m
+2025-05-12 18:23:17,558 INFO:  * Restarting with stat
+2025-05-12 18:23:19,186 WARNING:  * Debugger is active!
+2025-05-12 18:23:19,191 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 18:23:35,783 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 18:23:35,783 INFO: [33mPress CTRL+C to quit[0m
+2025-05-12 18:23:35,785 INFO:  * Restarting with stat
+2025-05-12 18:23:37,308 WARNING:  * Debugger is active!
+2025-05-12 18:23:37,310 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 18:23:39,868 INFO: 127.0.0.1 - - [12/May/2025 18:23:39] "GET / HTTP/1.1" 200 -
+2025-05-12 18:23:39,989 INFO: 127.0.0.1 - - [12/May/2025 18:23:39] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:23:45,414 INFO: 127.0.0.1 - - [12/May/2025 18:23:45] "GET /register HTTP/1.1" 200 -
+2025-05-12 18:23:45,501 INFO: 127.0.0.1 - - [12/May/2025 18:23:45] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:24:01,745 INFO: User Nti registered successfully
+2025-05-12 18:24:01,747 INFO: 127.0.0.1 - - [12/May/2025 18:24:01] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-12 18:24:01,764 INFO: 127.0.0.1 - - [12/May/2025 18:24:01] "GET /login HTTP/1.1" 200 -
+2025-05-12 18:24:01,844 INFO: 127.0.0.1 - - [12/May/2025 18:24:01] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:24:10,845 INFO: User Nti logged in successfully
+2025-05-12 18:24:10,846 INFO: 127.0.0.1 - - [12/May/2025 18:24:10] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-12 18:24:10,921 INFO: Dashboard loaded for user Nti
+2025-05-12 18:24:10,961 ERROR: Dashboard error: 'form' is undefined
+2025-05-12 18:24:10,988 INFO: 127.0.0.1 - - [12/May/2025 18:24:10] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2025-05-12 18:24:11,088 INFO: 127.0.0.1 - - [12/May/2025 18:24:11] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:24:11,323 INFO: 127.0.0.1 - - [12/May/2025 18:24:11] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-12 18:24:11,327 INFO: 127.0.0.1 - - [12/May/2025 18:24:11] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-12 18:24:11,381 INFO: 127.0.0.1 - - [12/May/2025 18:24:11] "GET /dashboard?__debugger__=yes&cmd=resource&f=console.png&s=j5vzxOzKSbFWtHHyZ3UG HTTP/1.1" 200 -
+2025-05-12 18:24:11,446 INFO: 127.0.0.1 - - [12/May/2025 18:24:11] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-12 18:26:35,333 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-12 18:26:35,541 INFO:  * Restarting with stat
+2025-05-12 18:26:37,909 WARNING:  * Debugger is active!
+2025-05-12 18:26:37,913 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 18:27:30,079 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 18:27:30,080 INFO: [33mPress CTRL+C to quit[0m
+2025-05-12 18:27:30,087 INFO:  * Restarting with stat
+2025-05-12 18:27:32,161 WARNING:  * Debugger is active!
+2025-05-12 18:27:32,164 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 18:27:32,678 INFO: 127.0.0.1 - - [12/May/2025 18:27:32] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-12 18:27:32,702 INFO: 127.0.0.1 - - [12/May/2025 18:27:32] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-05-12 18:27:42,073 WARNING: Failed login attempt for username: Nti
+2025-05-12 18:27:42,077 INFO: 127.0.0.1 - - [12/May/2025 18:27:42] "POST /login?next=/dashboard HTTP/1.1" 200 -
+2025-05-12 18:27:52,285 WARNING: Failed login attempt for username: Nti
+2025-05-12 18:27:52,288 INFO: 127.0.0.1 - - [12/May/2025 18:27:52] "POST /login?next=/dashboard HTTP/1.1" 200 -
+2025-05-12 18:27:55,928 INFO: 127.0.0.1 - - [12/May/2025 18:27:55] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:29:35,804 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-12 18:29:35,977 INFO:  * Restarting with stat
+2025-05-12 18:35:13,111 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 18:35:13,111 INFO: [33mPress CTRL+C to quit[0m
+2025-05-12 18:35:13,113 INFO:  * Restarting with stat
+2025-05-12 18:35:14,674 WARNING:  * Debugger is active!
+2025-05-12 18:35:14,679 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 18:35:17,902 INFO: The CSRF token is invalid.
+2025-05-12 18:35:17,923 INFO: 127.0.0.1 - - [12/May/2025 18:35:17] "POST /login?next=/dashboard HTTP/1.1" 200 -
+2025-05-12 18:35:17,978 INFO: 127.0.0.1 - - [12/May/2025 18:35:17] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:35:20,220 INFO: The CSRF token is invalid.
+2025-05-12 18:35:20,222 INFO: 127.0.0.1 - - [12/May/2025 18:35:20] "POST /login?next=/dashboard HTTP/1.1" 200 -
+2025-05-12 18:35:20,260 INFO: 127.0.0.1 - - [12/May/2025 18:35:20] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:35:28,650 WARNING: Failed login attempt for username: Nti
+2025-05-12 18:35:28,652 INFO: 127.0.0.1 - - [12/May/2025 18:35:28] "POST /login?next=/dashboard HTTP/1.1" 200 -
+2025-05-12 18:35:28,699 INFO: 127.0.0.1 - - [12/May/2025 18:35:28] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:35:46,746 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-12 18:35:46,746 INFO: [33mPress CTRL+C to quit[0m
+2025-05-12 18:35:46,748 INFO:  * Restarting with stat
+2025-05-12 18:35:48,105 WARNING:  * Debugger is active!
+2025-05-12 18:35:48,108 INFO:  * Debugger PIN: 695-393-602
+2025-05-12 18:35:58,854 INFO: 127.0.0.1 - - [12/May/2025 18:35:58] "GET / HTTP/1.1" 200 -
+2025-05-12 18:35:58,906 INFO: 127.0.0.1 - - [12/May/2025 18:35:58] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:36:05,131 INFO: 127.0.0.1 - - [12/May/2025 18:36:05] "GET /register HTTP/1.1" 200 -
+2025-05-12 18:36:05,224 INFO: 127.0.0.1 - - [12/May/2025 18:36:05] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:36:21,950 INFO: User Nti registered successfully
+2025-05-12 18:36:21,951 INFO: 127.0.0.1 - - [12/May/2025 18:36:21] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-12 18:36:21,973 INFO: 127.0.0.1 - - [12/May/2025 18:36:21] "GET /login HTTP/1.1" 200 -
+2025-05-12 18:36:22,061 INFO: 127.0.0.1 - - [12/May/2025 18:36:22] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:36:31,361 INFO: User Nti logged in successfully
+2025-05-12 18:36:31,362 INFO: 127.0.0.1 - - [12/May/2025 18:36:31] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-12 18:36:31,422 INFO: Dashboard loaded for user Nti
+2025-05-12 18:36:31,551 INFO: 127.0.0.1 - - [12/May/2025 18:36:31] "GET /dashboard HTTP/1.1" 200 -
+2025-05-12 18:36:31,627 INFO: 127.0.0.1 - - [12/May/2025 18:36:31] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:36:52,430 INFO: Tracked tiktok link click for task 1 by user Nti
+2025-05-12 18:36:52,432 INFO: 127.0.0.1 - - [12/May/2025 18:36:52] "[35m[1mPOST /track_link/1/tiktok HTTP/1.1[0m" 204 -
+2025-05-12 18:36:58,237 INFO: Tracked instagram link click for task 1 by user Nti
+2025-05-12 18:36:58,238 INFO: 127.0.0.1 - - [12/May/2025 18:36:58] "[35m[1mPOST /track_link/1/instagram HTTP/1.1[0m" 204 -
+2025-05-12 18:37:04,797 INFO: Tracked youtube link click for task 1 by user Nti
+2025-05-12 18:37:04,799 INFO: 127.0.0.1 - - [12/May/2025 18:37:04] "[35m[1mPOST /track_link/1/youtube HTTP/1.1[0m" 204 -
+2025-05-12 18:37:10,043 INFO: Task 1 completed by user Nti, earned $5.0
+2025-05-12 18:37:10,044 INFO: 127.0.0.1 - - [12/May/2025 18:37:10] "[32mPOST /complete_task/1 HTTP/1.1[0m" 302 -
+2025-05-12 18:37:10,063 INFO: Dashboard loaded for user Nti
+2025-05-12 18:37:10,066 INFO: 127.0.0.1 - - [12/May/2025 18:37:10] "GET /dashboard HTTP/1.1" 200 -
+2025-05-12 18:37:10,167 INFO: 127.0.0.1 - - [12/May/2025 18:37:10] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:37:38,615 INFO: Task 2 completed by user Nti, earned $1000.0
+2025-05-12 18:37:38,616 INFO: 127.0.0.1 - - [12/May/2025 18:37:38] "[32mPOST /complete_task/2 HTTP/1.1[0m" 302 -
+2025-05-12 18:37:38,644 INFO: Dashboard loaded for user Nti
+2025-05-12 18:37:38,650 INFO: 127.0.0.1 - - [12/May/2025 18:37:38] "GET /dashboard HTTP/1.1" 200 -
+2025-05-12 18:37:38,699 INFO: 127.0.0.1 - - [12/May/2025 18:37:38] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:37:45,401 INFO: 127.0.0.1 - - [12/May/2025 18:37:45] "GET /profile HTTP/1.1" 200 -
+2025-05-12 18:37:45,468 INFO: 127.0.0.1 - - [12/May/2025 18:37:45] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:38:14,290 INFO: Profile updated for user Nti
+2025-05-12 18:38:14,291 INFO: 127.0.0.1 - - [12/May/2025 18:38:14] "[32mPOST /profile HTTP/1.1[0m" 302 -
+2025-05-12 18:38:14,311 INFO: 127.0.0.1 - - [12/May/2025 18:38:14] "GET /profile HTTP/1.1" 200 -
+2025-05-12 18:38:14,382 INFO: 127.0.0.1 - - [12/May/2025 18:38:14] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:38:14,582 INFO: 127.0.0.1 - - [12/May/2025 18:38:14] "GET /static/uploads/1_1.jpg HTTP/1.1" 200 -
+2025-05-12 18:38:27,374 INFO: Profile updated for user Nti
+2025-05-12 18:38:27,375 INFO: 127.0.0.1 - - [12/May/2025 18:38:27] "[32mPOST /profile HTTP/1.1[0m" 302 -
+2025-05-12 18:38:27,390 INFO: 127.0.0.1 - - [12/May/2025 18:38:27] "GET /profile HTTP/1.1" 200 -
+2025-05-12 18:38:27,461 INFO: 127.0.0.1 - - [12/May/2025 18:38:27] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:38:27,468 INFO: 127.0.0.1 - - [12/May/2025 18:38:27] "[36mGET /static/uploads/1_1.jpg HTTP/1.1[0m" 304 -
+2025-05-12 18:38:30,524 INFO: Dashboard loaded for user Nti
+2025-05-12 18:38:30,525 INFO: 127.0.0.1 - - [12/May/2025 18:38:30] "GET /dashboard HTTP/1.1" 200 -
+2025-05-12 18:38:30,575 INFO: 127.0.0.1 - - [12/May/2025 18:38:30] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:38:35,085 INFO: 127.0.0.1 - - [12/May/2025 18:38:35] "GET /profile HTTP/1.1" 200 -
+2025-05-12 18:38:35,125 INFO: 127.0.0.1 - - [12/May/2025 18:38:35] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:38:35,149 INFO: 127.0.0.1 - - [12/May/2025 18:38:35] "[36mGET /static/uploads/1_1.jpg HTTP/1.1[0m" 304 -
+2025-05-12 18:38:38,265 INFO: Dashboard loaded for user Nti
+2025-05-12 18:38:38,277 INFO: 127.0.0.1 - - [12/May/2025 18:38:38] "GET /dashboard HTTP/1.1" 200 -
+2025-05-12 18:38:38,327 INFO: 127.0.0.1 - - [12/May/2025 18:38:38] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:38:48,384 INFO: 127.0.0.1 - - [12/May/2025 18:38:48] "[32mPOST /withdraw HTTP/1.1[0m" 302 -
+2025-05-12 18:38:48,405 INFO: Dashboard loaded for user Nti
+2025-05-12 18:38:48,407 INFO: 127.0.0.1 - - [12/May/2025 18:38:48] "GET /dashboard HTTP/1.1" 200 -
+2025-05-12 18:38:48,461 INFO: 127.0.0.1 - - [12/May/2025 18:38:48] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:38:55,831 INFO: Withdrawal request for $10.0 submitted by user Nti
+2025-05-12 18:38:55,832 INFO: 127.0.0.1 - - [12/May/2025 18:38:55] "[32mPOST /withdraw HTTP/1.1[0m" 302 -
+2025-05-12 18:38:55,857 INFO: Dashboard loaded for user Nti
+2025-05-12 18:38:55,860 INFO: 127.0.0.1 - - [12/May/2025 18:38:55] "GET /dashboard HTTP/1.1" 200 -
+2025-05-12 18:38:55,946 INFO: 127.0.0.1 - - [12/May/2025 18:38:55] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-12 18:40:10,586 INFO: User Nti logged out
+2025-05-12 18:40:10,588 INFO: 127.0.0.1 - - [12/May/2025 18:40:10] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-12 18:40:10,605 INFO: 127.0.0.1 - - [12/May/2025 18:40:10] "GET / HTTP/1.1" 200 -
+2025-05-12 18:40:10,665 INFO: 127.0.0.1 - - [12/May/2025 18:40:10] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-13 15:27:24,034 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-13 15:27:24,035 INFO: [33mPress CTRL+C to quit[0m
+2025-05-13 15:27:24,039 INFO:  * Restarting with stat
+2025-05-13 15:27:25,866 WARNING:  * Debugger is active!
+2025-05-13 15:27:25,869 INFO:  * Debugger PIN: 695-393-602
+2025-05-13 15:27:49,166 INFO: 127.0.0.1 - - [13/May/2025 15:27:49] "GET / HTTP/1.1" 200 -
+2025-05-13 15:27:49,395 INFO: 127.0.0.1 - - [13/May/2025 15:27:49] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-13 15:27:53,456 INFO: 127.0.0.1 - - [13/May/2025 15:27:53] "GET /login HTTP/1.1" 200 -
+2025-05-13 15:27:53,517 INFO: 127.0.0.1 - - [13/May/2025 15:27:53] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-13 15:28:00,559 INFO: 127.0.0.1 - - [13/May/2025 15:28:00] "GET /register HTTP/1.1" 200 -
+2025-05-13 15:28:00,689 INFO: 127.0.0.1 - - [13/May/2025 15:28:00] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-13 15:28:18,974 INFO: User test1 registered successfully
+2025-05-13 15:28:18,976 INFO: 127.0.0.1 - - [13/May/2025 15:28:18] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-13 15:28:18,996 INFO: 127.0.0.1 - - [13/May/2025 15:28:18] "GET /login HTTP/1.1" 200 -
+2025-05-13 15:28:19,087 INFO: 127.0.0.1 - - [13/May/2025 15:28:19] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-13 15:28:31,403 INFO: User test1 logged in successfully
+2025-05-13 15:28:31,405 INFO: 127.0.0.1 - - [13/May/2025 15:28:31] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-13 15:28:31,497 INFO: Dashboard loaded for user test1
+2025-05-13 15:28:31,741 ERROR: Dashboard error: 'now' is undefined
+2025-05-13 15:28:31,744 INFO: 127.0.0.1 - - [13/May/2025 15:28:31] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-13 15:28:31,758 INFO: 127.0.0.1 - - [13/May/2025 15:28:31] "GET / HTTP/1.1" 200 -
+2025-05-13 15:28:31,835 INFO: 127.0.0.1 - - [13/May/2025 15:28:31] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-13 15:32:04,994 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-13 15:32:05,316 INFO:  * Restarting with stat
+2025-05-13 15:32:58,283 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-13 15:32:58,283 INFO: [33mPress CTRL+C to quit[0m
+2025-05-13 15:32:58,288 INFO:  * Restarting with stat
+2025-05-13 15:33:00,291 WARNING:  * Debugger is active!
+2025-05-13 15:33:00,295 INFO:  * Debugger PIN: 695-393-602
+2025-05-13 15:33:20,691 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-13 15:33:20,984 INFO:  * Restarting with stat
+2025-05-13 15:33:37,247 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.10.2:5000
+2025-05-13 15:33:37,248 INFO: [33mPress CTRL+C to quit[0m
+2025-05-13 15:33:37,251 INFO:  * Restarting with stat
+2025-05-13 15:33:39,029 WARNING:  * Debugger is active!
+2025-05-13 15:33:39,032 INFO:  * Debugger PIN: 695-393-602
+2025-05-13 15:33:44,497 INFO: 127.0.0.1 - - [13/May/2025 15:33:44] "GET / HTTP/1.1" 200 -
+2025-05-13 15:33:44,563 INFO: 127.0.0.1 - - [13/May/2025 15:33:44] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-13 15:33:49,091 INFO: 127.0.0.1 - - [13/May/2025 15:33:49] "GET /login HTTP/1.1" 200 -
+2025-05-13 15:33:49,179 INFO: 127.0.0.1 - - [13/May/2025 15:33:49] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-13 15:33:58,295 WARNING: Failed login attempt for username: test1
+2025-05-13 15:33:58,297 INFO: 127.0.0.1 - - [13/May/2025 15:33:58] "POST /login HTTP/1.1" 200 -
+2025-05-13 15:33:58,396 INFO: 127.0.0.1 - - [13/May/2025 15:33:58] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-13 15:34:00,697 INFO: 127.0.0.1 - - [13/May/2025 15:34:00] "GET /register HTTP/1.1" 200 -
+2025-05-13 15:34:00,828 INFO: 127.0.0.1 - - [13/May/2025 15:34:00] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-13 15:34:15,532 INFO: User Nti registered successfully
+2025-05-13 15:34:15,535 INFO: 127.0.0.1 - - [13/May/2025 15:34:15] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-13 15:34:15,546 INFO: 127.0.0.1 - - [13/May/2025 15:34:15] "GET /login HTTP/1.1" 200 -
+2025-05-13 15:34:15,643 INFO: 127.0.0.1 - - [13/May/2025 15:34:15] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-13 15:34:26,327 INFO: User Nti logged in successfully
+2025-05-13 15:34:26,328 INFO: 127.0.0.1 - - [13/May/2025 15:34:26] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-13 15:34:26,405 ERROR: Dashboard error: can't subtract offset-naive and offset-aware datetimes
+2025-05-13 15:34:26,406 INFO: 127.0.0.1 - - [13/May/2025 15:34:26] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-13 15:34:26,422 INFO: 127.0.0.1 - - [13/May/2025 15:34:26] "GET / HTTP/1.1" 200 -
+2025-05-13 15:34:26,496 INFO: 127.0.0.1 - - [13/May/2025 15:34:26] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-13 15:36:36,547 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-13 15:36:36,753 INFO:  * Restarting with stat
+2025-05-13 15:36:40,307 WARNING:  * Debugger is active!
+2025-05-13 15:36:40,312 INFO:  * Debugger PIN: 695-393-602
+2025-05-13 15:36:40,810 INFO: 127.0.0.1 - - [13/May/2025 15:36:40] "GET / HTTP/1.1" 200 -
+2025-05-13 15:36:40,897 INFO: 127.0.0.1 - - [13/May/2025 15:36:40] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-13 15:36:44,791 INFO: 127.0.0.1 - - [13/May/2025 15:36:44] "GET /login HTTP/1.1" 200 -
+2025-05-13 15:36:44,874 INFO: 127.0.0.1 - - [13/May/2025 15:36:44] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-13 15:37:00,522 WARNING: Failed login attempt for username: Nti
+2025-05-13 15:37:00,525 INFO: 127.0.0.1 - - [13/May/2025 15:37:00] "POST /login HTTP/1.1" 200 -
+2025-05-13 15:37:00,610 INFO: 127.0.0.1 - - [13/May/2025 15:37:00] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-13 15:37:06,241 INFO: 127.0.0.1 - - [13/May/2025 15:37:06] "GET /register HTTP/1.1" 200 -
+2025-05-13 15:37:06,318 INFO: 127.0.0.1 - - [13/May/2025 15:37:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-13 15:37:19,278 INFO: User Nti registered successfully
+2025-05-13 15:37:19,280 INFO: 127.0.0.1 - - [13/May/2025 15:37:19] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-13 15:37:19,298 INFO: 127.0.0.1 - - [13/May/2025 15:37:19] "GET /login HTTP/1.1" 200 -
+2025-05-13 15:37:19,379 INFO: 127.0.0.1 - - [13/May/2025 15:37:19] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-13 15:37:27,922 INFO: User Nti logged in successfully
+2025-05-13 15:37:27,924 INFO: 127.0.0.1 - - [13/May/2025 15:37:27] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-13 15:37:28,003 ERROR: Dashboard error: can't subtract offset-naive and offset-aware datetimes
+2025-05-13 15:37:28,006 INFO: 127.0.0.1 - - [13/May/2025 15:37:28] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-13 15:37:28,030 INFO: 127.0.0.1 - - [13/May/2025 15:37:28] "GET / HTTP/1.1" 200 -
+2025-05-13 15:37:28,116 INFO: 127.0.0.1 - - [13/May/2025 15:37:28] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-13 15:38:36,385 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-13 15:38:36,624 INFO:  * Restarting with stat
+2025-05-13 15:38:38,444 WARNING:  * Debugger is active!
+2025-05-13 15:38:38,450 INFO:  * Debugger PIN: 695-393-602
+2025-05-13 15:38:46,246 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.10.2:5000
+2025-05-13 15:38:46,246 INFO: [33mPress CTRL+C to quit[0m
+2025-05-13 15:38:46,249 INFO:  * Restarting with stat
+2025-05-13 15:38:48,226 WARNING:  * Debugger is active!
+2025-05-13 15:38:48,230 INFO:  * Debugger PIN: 695-393-602
+2025-05-13 15:38:54,962 INFO: 127.0.0.1 - - [13/May/2025 15:38:54] "GET / HTTP/1.1" 200 -
+2025-05-13 15:38:55,057 INFO: 127.0.0.1 - - [13/May/2025 15:38:55] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-13 15:38:58,284 INFO: 127.0.0.1 - - [13/May/2025 15:38:58] "GET /login HTTP/1.1" 200 -
+2025-05-13 15:38:58,364 INFO: 127.0.0.1 - - [13/May/2025 15:38:58] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-13 15:39:07,073 INFO: User Nti logged in successfully
+2025-05-13 15:39:07,075 INFO: 127.0.0.1 - - [13/May/2025 15:39:07] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-13 15:39:07,123 ERROR: Dashboard error: can't subtract offset-naive and offset-aware datetimes
+2025-05-13 15:39:07,124 INFO: 127.0.0.1 - - [13/May/2025 15:39:07] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-13 15:39:07,145 INFO: 127.0.0.1 - - [13/May/2025 15:39:07] "GET / HTTP/1.1" 200 -
+2025-05-13 15:39:07,232 INFO: 127.0.0.1 - - [13/May/2025 15:39:07] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-13 15:43:24,670 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-13 15:43:24,883 INFO:  * Restarting with stat
+2025-05-13 15:43:27,513 WARNING:  * Debugger is active!
+2025-05-13 15:43:27,518 INFO:  * Debugger PIN: 695-393-602
+2025-05-13 15:46:56,920 INFO: Database created
+2025-05-13 15:46:57,022 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-13 15:46:57,023 INFO: [33mPress CTRL+C to quit[0m
+2025-05-13 15:46:57,027 INFO:  * Restarting with stat
+2025-05-13 15:46:58,982 INFO: Database created
+2025-05-13 15:46:59,043 WARNING:  * Debugger is active!
+2025-05-13 15:46:59,047 INFO:  * Debugger PIN: 695-393-602
+2025-05-13 15:47:15,654 DEBUG: Index route accessed, user authenticated: False, session: <SecureCookieSession {}>
+2025-05-13 15:47:15,677 INFO: 127.0.0.1 - - [13/May/2025 15:47:15] "GET / HTTP/1.1" 200 -
+2025-05-13 15:47:17,166 INFO: 127.0.0.1 - - [13/May/2025 15:47:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-13 15:47:20,784 DEBUG: Login route accessed, method: GET
+2025-05-13 15:47:20,784 DEBUG: Form validation failed or GET request
+2025-05-13 15:47:20,785 DEBUG: Rendering login.html
+2025-05-13 15:47:20,798 INFO: 127.0.0.1 - - [13/May/2025 15:47:20] "GET /login HTTP/1.1" 200 -
+2025-05-13 15:47:33,021 DEBUG: Login route accessed, method: POST
+2025-05-13 15:47:33,021 DEBUG: Form validated successfully
+2025-05-13 15:47:33,021 DEBUG: Attempting login for username: Nti
+2025-05-13 15:47:33,050 WARNING: No user found for username: Nti
+2025-05-13 15:47:33,051 DEBUG: Rendering login.html
+2025-05-13 15:47:33,053 INFO: 127.0.0.1 - - [13/May/2025 15:47:33] "POST /login HTTP/1.1" 200 -
+2025-05-13 15:47:35,968 DEBUG: Register route accessed, method: GET
+2025-05-13 15:47:35,985 INFO: 127.0.0.1 - - [13/May/2025 15:47:35] "GET /register HTTP/1.1" 200 -
+2025-05-13 15:47:50,862 DEBUG: Register route accessed, method: POST
+2025-05-13 15:47:50,947 DEBUG: Register route accessed, method: POST
+2025-05-13 15:47:51,026 DEBUG: Attempting registration for username: Nti
+2025-05-13 15:47:51,027 DEBUG: Attempting registration for username: Nti
+2025-05-13 15:47:51,365 INFO: User Nti registered successfully
+2025-05-13 15:47:51,367 INFO: 127.0.0.1 - - [13/May/2025 15:47:51] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-13 15:47:51,384 ERROR: Registration error: (sqlite3.IntegrityError) UNIQUE constraint failed: user.email
+[SQL: INSERT INTO user (username, email, password_hash, balance, profile_picture, is_admin, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('Nti', 'kingkongnyame2000@gmail.com', 'scrypt:32768:8:1$Pvmxq9dhEd4S7L8k$ebdef05be0a36074e359b08fdf84ef5f89279937839b75c16f6c828bfe229fdeb568e7ca29cc067b77cdcd0c011f0d04311eccaabdcc2f684cc82c35a3742bb1', 1.0, None, 0, '2025-05-13 15:47:51.383401')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "C:\Users\Emjude\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Emjude\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: user.email
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Emjude\Desktop\TaskEarn\app.py", line 135, in register
+    db.session.commit()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Emjude\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\scoping.py", line 599, in commit
+    return self._proxied.commit()
+           ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Emjude\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 2032, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "C:\Users\Emjude\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Emjude\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 1313, in commit
+    self._prepare_impl()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\Emjude\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\Emjude\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 1288, in _prepare_impl
+    self.session.flush()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Emjude\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 4353, in flush
+    self._flush(objects)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Emjude\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 4488, in _flush
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Emjude\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Emjude\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 4449, in _flush
+    flush_context.execute()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Emjude\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "C:\Users\Emjude\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.mapper,
+        ^^^^^^^^^^^^
+        uow.states_for_mapper_hierarchy(self.mapper, False, False),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        uow,
+        ^^^^
+    )
+    ^
+  File "C:\Users\Emjude\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        base_mapper,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        insert,
+        ^^^^^^^
+    )
+    ^
+  File "C:\Users\Emjude\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+        statement,
+        params,
+        execution_options=execution_options,
+    )
+  File "C:\Users\Emjude\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\Emjude\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Emjude\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\Emjude\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Emjude\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Emjude\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Emjude\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Emjude\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 945, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.email
+[SQL: INSERT INTO user (username, email, password_hash, balance, profile_picture, is_admin, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('Nti', 'kingkongnyame2000@gmail.com', 'scrypt:32768:8:1$Pvmxq9dhEd4S7L8k$ebdef05be0a36074e359b08fdf84ef5f89279937839b75c16f6c828bfe229fdeb568e7ca29cc067b77cdcd0c011f0d04311eccaabdcc2f684cc82c35a3742bb1', 1.0, None, 0, '2025-05-13 15:47:51.383401')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-05-13 15:47:51,912 INFO: 127.0.0.1 - - [13/May/2025 15:47:51] "POST /register HTTP/1.1" 200 -
+2025-05-13 15:48:27,395 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-13 15:48:27,622 INFO:  * Restarting with stat
+2025-05-13 15:48:30,126 WARNING:  * Debugger is active!
+2025-05-13 15:48:30,132 INFO:  * Debugger PIN: 695-393-602
+2025-05-13 15:48:34,088 INFO: The CSRF token is invalid.
+2025-05-13 15:48:34,104 INFO: 127.0.0.1 - - [13/May/2025 15:48:34] "POST /register HTTP/1.1" 200 -
+2025-05-13 15:48:51,008 INFO: User Nti registered successfully
+2025-05-13 15:48:51,009 INFO: 127.0.0.1 - - [13/May/2025 15:48:51] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-13 15:48:51,051 INFO: 127.0.0.1 - - [13/May/2025 15:48:51] "GET /login HTTP/1.1" 200 -
+2025-05-13 15:48:58,706 INFO: User Nti logged in successfully
+2025-05-13 15:48:58,707 INFO: 127.0.0.1 - - [13/May/2025 15:48:58] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-13 15:48:58,857 INFO: Dashboard loaded for user Nti
+2025-05-13 15:48:59,067 ERROR: Dashboard error: 'now' is undefined
+2025-05-13 15:48:59,283 INFO: 127.0.0.1 - - [13/May/2025 15:48:59] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2025-05-13 15:48:59,649 INFO: 127.0.0.1 - - [13/May/2025 15:48:59] "GET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-05-13 15:48:59,673 INFO: 127.0.0.1 - - [13/May/2025 15:48:59] "GET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-05-13 15:48:59,803 INFO: 127.0.0.1 - - [13/May/2025 15:48:59] "GET /dashboard?__debugger__=yes&cmd=resource&f=console.png&s=V9saG2C3nwDryCQGrksH HTTP/1.1" 200 -
+2025-05-13 15:48:59,829 INFO: 127.0.0.1 - - [13/May/2025 15:48:59] "GET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-05-13 15:49:45,230 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-13 15:49:45,972 INFO:  * Restarting with stat
+2025-05-13 15:49:48,816 WARNING:  * Debugger is active!
+2025-05-13 15:49:48,821 INFO:  * Debugger PIN: 695-393-602
+2025-05-13 15:50:51,415 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-13 15:50:51,655 INFO:  * Restarting with stat
+2025-05-13 15:50:55,233 WARNING:  * Debugger is active!
+2025-05-13 15:50:55,235 INFO:  * Debugger PIN: 695-393-602
+2025-05-13 15:51:40,207 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-13 15:51:40,207 INFO: [33mPress CTRL+C to quit[0m
+2025-05-13 15:51:40,211 INFO:  * Restarting with stat
+2025-05-13 15:51:42,078 WARNING:  * Debugger is active!
+2025-05-13 15:51:42,080 INFO:  * Debugger PIN: 695-393-602
+2025-05-13 15:52:30,286 INFO: 127.0.0.1 - - [13/May/2025 15:52:30] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-13 15:52:30,332 INFO: 127.0.0.1 - - [13/May/2025 15:52:30] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-05-13 15:52:44,979 WARNING: Failed login attempt for username: Nti
+2025-05-13 15:52:44,980 INFO: 127.0.0.1 - - [13/May/2025 15:52:44] "POST /login?next=/dashboard HTTP/1.1" 200 -
+2025-05-13 15:52:47,133 INFO: 127.0.0.1 - - [13/May/2025 15:52:47] "GET /register HTTP/1.1" 200 -
+2025-05-13 15:53:08,433 INFO: User Nti registered successfully
+2025-05-13 15:53:08,434 INFO: 127.0.0.1 - - [13/May/2025 15:53:08] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-13 15:53:08,449 INFO: 127.0.0.1 - - [13/May/2025 15:53:08] "GET /login HTTP/1.1" 200 -
+2025-05-13 15:53:16,497 INFO: User Nti logged in successfully
+2025-05-13 15:53:16,499 INFO: 127.0.0.1 - - [13/May/2025 15:53:16] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-13 15:53:16,582 INFO: Dashboard loaded for user Nti
+2025-05-13 15:53:16,781 INFO: 127.0.0.1 - - [13/May/2025 15:53:16] "GET /dashboard HTTP/1.1" 200 -
+2025-05-13 15:53:21,147 INFO: 127.0.0.1 - - [13/May/2025 15:53:21] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-13 15:53:29,071 INFO: 127.0.0.1 - - [13/May/2025 15:53:29] "GET /profile HTTP/1.1" 200 -
+2025-05-13 15:53:29,166 INFO: 127.0.0.1 - - [13/May/2025 15:53:29] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-13 15:53:32,105 INFO: Dashboard loaded for user Nti
+2025-05-13 15:53:32,117 INFO: 127.0.0.1 - - [13/May/2025 15:53:32] "GET /dashboard HTTP/1.1" 200 -
+2025-05-13 15:53:32,225 INFO: 127.0.0.1 - - [13/May/2025 15:53:32] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 09:20:40,173 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-14 09:20:40,173 INFO: [33mPress CTRL+C to quit[0m
+2025-05-14 09:20:40,184 INFO:  * Restarting with stat
+2025-05-14 09:20:41,424 WARNING:  * Debugger is active!
+2025-05-14 09:20:41,428 INFO:  * Debugger PIN: 128-484-479
+2025-05-14 09:25:07,971 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-14 09:25:08,224 INFO:  * Restarting with stat
+2025-05-14 09:25:10,145 WARNING:  * Debugger is active!
+2025-05-14 09:25:10,151 INFO:  * Debugger PIN: 406-543-785
+2025-05-14 09:25:15,363 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.10.2:5000
+2025-05-14 09:25:15,364 INFO: [33mPress CTRL+C to quit[0m
+2025-05-14 09:25:15,366 INFO:  * Restarting with stat
+2025-05-14 09:25:16,723 WARNING:  * Debugger is active!
+2025-05-14 09:25:16,726 INFO:  * Debugger PIN: 406-543-785
+2025-05-14 09:25:22,795 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-14 09:25:23,211 INFO:  * Restarting with stat
+2025-05-14 09:25:53,258 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.10.2:5000
+2025-05-14 09:25:53,258 INFO: [33mPress CTRL+C to quit[0m
+2025-05-14 09:25:53,260 INFO:  * Restarting with stat
+2025-05-14 09:25:54,562 WARNING:  * Debugger is active!
+2025-05-14 09:25:54,565 INFO:  * Debugger PIN: 406-543-785
+2025-05-14 09:31:50,864 INFO: 172.20.10.1 - - [14/May/2025 09:31:50] "GET / HTTP/1.1" 200 -
+2025-05-14 09:31:54,478 INFO: 172.20.10.1 - - [14/May/2025 09:31:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-14 09:33:30,441 INFO: 172.20.10.1 - - [14/May/2025 09:33:30] "GET / HTTP/1.1" 200 -
+2025-05-14 09:34:06,330 INFO: 172.20.10.1 - - [14/May/2025 09:34:06] "GET /login HTTP/1.1" 200 -
+2025-05-14 09:34:21,324 INFO: User Nti logged in successfully
+2025-05-14 09:34:21,325 INFO: 172.20.10.1 - - [14/May/2025 09:34:21] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-14 09:34:21,387 INFO: Dashboard loaded for user Nti
+2025-05-14 09:34:21,471 INFO: 172.20.10.1 - - [14/May/2025 09:34:21] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 09:35:26,797 INFO: Tracked tiktok link click for task 1 by user Nti
+2025-05-14 09:35:26,799 INFO: 172.20.10.1 - - [14/May/2025 09:35:26] "[35m[1mPOST /track_link/1/tiktok HTTP/1.1[0m" 204 -
+2025-05-14 09:35:53,728 INFO: Tracked instagram link click for task 1 by user Nti
+2025-05-14 09:35:53,730 INFO: 172.20.10.1 - - [14/May/2025 09:35:53] "[35m[1mPOST /track_link/1/instagram HTTP/1.1[0m" 204 -
+2025-05-14 09:36:08,106 INFO: Tracked youtube link click for task 1 by user Nti
+2025-05-14 09:36:08,107 INFO: 172.20.10.1 - - [14/May/2025 09:36:08] "[35m[1mPOST /track_link/1/youtube HTTP/1.1[0m" 204 -
+2025-05-14 09:36:47,384 INFO: 172.20.10.1 - - [14/May/2025 09:36:47] "GET /profile HTTP/1.1" 200 -
+2025-05-14 09:37:12,832 INFO: Profile updated for user Nti
+2025-05-14 09:37:12,832 INFO: 172.20.10.1 - - [14/May/2025 09:37:12] "[32mPOST /profile HTTP/1.1[0m" 302 -
+2025-05-14 09:37:12,872 INFO: 172.20.10.1 - - [14/May/2025 09:37:12] "GET /profile HTTP/1.1" 200 -
+2025-05-14 09:37:13,136 INFO: 172.20.10.1 - - [14/May/2025 09:37:13] "GET /static/uploads/1_IMG_0899.jpeg HTTP/1.1" 200 -
+2025-05-14 09:37:32,075 INFO: Dashboard loaded for user Nti
+2025-05-14 09:37:32,080 INFO: 172.20.10.1 - - [14/May/2025 09:37:32] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 09:37:35,900 INFO: 172.20.10.1 - - [14/May/2025 09:37:35] "GET /profile HTTP/1.1" 200 -
+2025-05-14 09:37:36,006 INFO: 172.20.10.1 - - [14/May/2025 09:37:36] "[36mGET /static/uploads/1_IMG_0899.jpeg HTTP/1.1[0m" 304 -
+2025-05-14 09:37:47,176 INFO: Dashboard loaded for user Nti
+2025-05-14 09:37:47,179 INFO: 172.20.10.1 - - [14/May/2025 09:37:47] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 09:40:15,331 INFO: Dashboard loaded for user Nti
+2025-05-14 09:40:15,332 INFO: 172.20.10.1 - - [14/May/2025 09:40:15] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 09:40:28,321 INFO: Dashboard loaded for user Nti
+2025-05-14 09:40:28,325 INFO: 172.20.10.1 - - [14/May/2025 09:40:28] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 09:40:29,765 INFO: 172.20.10.1 - - [14/May/2025 09:40:29] "GET / HTTP/1.1" 200 -
+2025-05-14 09:43:01,601 INFO: 172.20.10.1 - - [14/May/2025 09:43:01] "GET / HTTP/1.1" 200 -
+2025-05-14 09:43:43,096 INFO: 127.0.0.1 - - [14/May/2025 09:43:43] "GET / HTTP/1.1" 200 -
+2025-05-14 09:43:43,517 INFO: 127.0.0.1 - - [14/May/2025 09:43:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-14 09:43:46,442 INFO: 127.0.0.1 - - [14/May/2025 09:43:46] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 09:44:38,434 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-14 09:44:38,618 INFO:  * Restarting with stat
+2025-05-14 09:44:41,949 WARNING:  * Debugger is active!
+2025-05-14 09:44:41,955 INFO:  * Debugger PIN: 406-543-785
+2025-05-14 09:47:34,006 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-14 09:47:34,217 INFO:  * Restarting with stat
+2025-05-14 09:47:36,413 WARNING:  * Debugger is active!
+2025-05-14 09:47:36,415 INFO:  * Debugger PIN: 406-543-785
+2025-05-14 09:48:01,152 INFO: 172.20.10.1 - - [14/May/2025 09:48:01] "GET / HTTP/1.1" 200 -
+2025-05-14 09:48:03,047 INFO: 172.20.10.1 - - [14/May/2025 09:48:03] "GET /login HTTP/1.1" 200 -
+2025-05-14 09:48:07,374 INFO: User Nti logged in successfully
+2025-05-14 09:48:07,375 INFO: 172.20.10.1 - - [14/May/2025 09:48:07] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-14 09:48:07,413 INFO: Dashboard loaded for user Nti
+2025-05-14 09:48:07,496 INFO: 172.20.10.1 - - [14/May/2025 09:48:07] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 09:48:50,009 INFO: Dashboard loaded for user Nti
+2025-05-14 09:48:50,096 INFO: 172.20.10.1 - - [14/May/2025 09:48:50] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 09:48:53,635 INFO: Dashboard loaded for user Nti
+2025-05-14 09:48:53,642 INFO: 172.20.10.1 - - [14/May/2025 09:48:53] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 09:49:10,547 INFO: Dashboard loaded for user Nti
+2025-05-14 09:49:10,552 INFO: 172.20.10.1 - - [14/May/2025 09:49:10] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 09:49:36,640 INFO: Dashboard loaded for user Nti
+2025-05-14 09:49:36,719 INFO: 172.20.10.1 - - [14/May/2025 09:49:36] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 09:50:19,864 INFO: Dashboard loaded for user Nti
+2025-05-14 09:50:19,955 INFO: 172.20.10.1 - - [14/May/2025 09:50:19] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 09:50:29,577 INFO: Dashboard loaded for user Nti
+2025-05-14 09:50:29,663 INFO: 172.20.10.1 - - [14/May/2025 09:50:29] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 09:51:54,090 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-14 09:51:54,247 INFO:  * Restarting with stat
+2025-05-14 09:51:55,745 WARNING:  * Debugger is active!
+2025-05-14 09:51:55,748 INFO:  * Debugger PIN: 406-543-785
+2025-05-14 09:51:57,868 INFO: 172.20.10.1 - - [14/May/2025 09:51:57] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-14 09:51:57,965 INFO: 172.20.10.1 - - [14/May/2025 09:51:57] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-05-14 09:52:05,846 INFO: User Nti logged in successfully
+2025-05-14 09:52:05,847 INFO: 172.20.10.1 - - [14/May/2025 09:52:05] "[32mPOST /login?next=/dashboard HTTP/1.1[0m" 302 -
+2025-05-14 09:52:05,903 INFO: Dashboard loaded for user Nti
+2025-05-14 09:52:05,931 INFO: 172.20.10.1 - - [14/May/2025 09:52:05] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 09:52:45,867 INFO: User Nti logged out
+2025-05-14 09:52:45,872 INFO: 172.20.10.1 - - [14/May/2025 09:52:45] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-14 09:52:45,911 INFO: 172.20.10.1 - - [14/May/2025 09:52:45] "GET / HTTP/1.1" 200 -
+2025-05-14 09:52:47,868 INFO: 172.20.10.1 - - [14/May/2025 09:52:47] "GET /register HTTP/1.1" 200 -
+2025-05-14 09:53:31,977 INFO: User Test1 registered successfully
+2025-05-14 09:53:31,979 INFO: 172.20.10.1 - - [14/May/2025 09:53:31] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-14 09:53:32,053 INFO: 172.20.10.1 - - [14/May/2025 09:53:32] "GET /login HTTP/1.1" 200 -
+2025-05-14 09:53:37,423 INFO: User Test1 logged in successfully
+2025-05-14 09:53:37,424 INFO: 172.20.10.1 - - [14/May/2025 09:53:37] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-14 09:53:37,487 INFO: Dashboard loaded for user Test1
+2025-05-14 09:53:37,493 INFO: 172.20.10.1 - - [14/May/2025 09:53:37] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 09:53:56,902 INFO: 127.0.0.1 - - [14/May/2025 09:53:56] "GET / HTTP/1.1" 200 -
+2025-05-14 09:53:56,997 INFO: 127.0.0.1 - - [14/May/2025 09:53:56] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 09:53:59,559 INFO: 127.0.0.1 - - [14/May/2025 09:53:59] "GET /login HTTP/1.1" 200 -
+2025-05-14 09:53:59,617 INFO: 127.0.0.1 - - [14/May/2025 09:53:59] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 09:54:05,260 INFO: 127.0.0.1 - - [14/May/2025 09:54:05] "GET /register HTTP/1.1" 200 -
+2025-05-14 09:54:05,301 INFO: 127.0.0.1 - - [14/May/2025 09:54:05] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 09:54:24,520 INFO: 127.0.0.1 - - [14/May/2025 09:54:24] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-14 09:54:24,542 INFO: 127.0.0.1 - - [14/May/2025 09:54:24] "GET /register HTTP/1.1" 200 -
+2025-05-14 09:54:24,600 INFO: 127.0.0.1 - - [14/May/2025 09:54:24] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 09:54:48,368 INFO: User TEST1 registered successfully
+2025-05-14 09:54:48,369 INFO: 127.0.0.1 - - [14/May/2025 09:54:48] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-14 09:54:48,382 INFO: 127.0.0.1 - - [14/May/2025 09:54:48] "GET /login HTTP/1.1" 200 -
+2025-05-14 09:54:48,455 INFO: 127.0.0.1 - - [14/May/2025 09:54:48] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 09:55:03,588 WARNING: Failed login attempt for username: TEST2
+2025-05-14 09:55:03,592 INFO: 127.0.0.1 - - [14/May/2025 09:55:03] "POST /login HTTP/1.1" 200 -
+2025-05-14 09:55:03,644 INFO: 127.0.0.1 - - [14/May/2025 09:55:03] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 09:55:09,657 WARNING: Failed login attempt for username: TEST2
+2025-05-14 09:55:09,660 INFO: 127.0.0.1 - - [14/May/2025 09:55:09] "POST /login HTTP/1.1" 200 -
+2025-05-14 09:55:09,705 INFO: 127.0.0.1 - - [14/May/2025 09:55:09] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 09:55:19,802 INFO: User TEST1 logged in successfully
+2025-05-14 09:55:19,803 INFO: 127.0.0.1 - - [14/May/2025 09:55:19] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-14 09:55:19,833 INFO: Dashboard loaded for user TEST1
+2025-05-14 09:55:19,836 INFO: 127.0.0.1 - - [14/May/2025 09:55:19] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 09:55:19,891 INFO: 127.0.0.1 - - [14/May/2025 09:55:19] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 09:57:16,123 INFO: Dashboard loaded for user TEST1
+2025-05-14 09:57:16,128 INFO: 127.0.0.1 - - [14/May/2025 09:57:16] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 09:57:16,164 INFO: 127.0.0.1 - - [14/May/2025 09:57:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 09:57:35,258 INFO: Dashboard loaded for user TEST1
+2025-05-14 09:57:35,262 INFO: 127.0.0.1 - - [14/May/2025 09:57:35] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 09:57:35,320 INFO: 127.0.0.1 - - [14/May/2025 09:57:35] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 09:58:00,747 INFO: User Test1 logged out
+2025-05-14 09:58:00,750 INFO: 172.20.10.1 - - [14/May/2025 09:58:00] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-14 09:58:00,790 INFO: 172.20.10.1 - - [14/May/2025 09:58:00] "GET / HTTP/1.1" 200 -
+2025-05-14 09:58:23,215 INFO: 172.20.10.1 - - [14/May/2025 09:58:23] "GET /register HTTP/1.1" 200 -
+2025-05-14 09:58:26,697 INFO: 172.20.10.1 - - [14/May/2025 09:58:26] "GET /login HTTP/1.1" 200 -
+2025-05-14 09:58:33,220 INFO: User Test1 logged in successfully
+2025-05-14 09:58:33,221 INFO: 172.20.10.1 - - [14/May/2025 09:58:33] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-14 09:58:33,276 INFO: Dashboard loaded for user Test1
+2025-05-14 09:58:33,277 INFO: 172.20.10.1 - - [14/May/2025 09:58:33] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 09:58:40,941 INFO: 172.20.10.1 - - [14/May/2025 09:58:40] "GET /profile HTTP/1.1" 200 -
+2025-05-14 09:59:06,695 INFO: Profile updated for user Test1
+2025-05-14 09:59:06,697 INFO: 172.20.10.1 - - [14/May/2025 09:59:06] "[32mPOST /profile HTTP/1.1[0m" 302 -
+2025-05-14 09:59:06,745 INFO: 172.20.10.1 - - [14/May/2025 09:59:06] "GET /profile HTTP/1.1" 200 -
+2025-05-14 09:59:06,988 INFO: 172.20.10.1 - - [14/May/2025 09:59:06] "GET /static/uploads/2_IMG_0816.jpeg HTTP/1.1" 200 -
+2025-05-14 09:59:13,549 INFO: Dashboard loaded for user Test1
+2025-05-14 09:59:13,554 INFO: 172.20.10.1 - - [14/May/2025 09:59:13] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 10:00:37,622 INFO: User Test1 logged out
+2025-05-14 10:00:37,622 INFO: 172.20.10.1 - - [14/May/2025 10:00:37] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-14 10:00:37,647 INFO: 172.20.10.1 - - [14/May/2025 10:00:37] "GET / HTTP/1.1" 200 -
+2025-05-14 10:02:45,280 INFO: 172.20.10.1 - - [14/May/2025 10:02:45] "GET /register HTTP/1.1" 200 -
+2025-05-14 10:02:47,372 INFO: 172.20.10.1 - - [14/May/2025 10:02:47] "GET /login HTTP/1.1" 200 -
+2025-05-14 10:02:51,938 INFO: User Test1 logged in successfully
+2025-05-14 10:02:51,939 INFO: 172.20.10.1 - - [14/May/2025 10:02:51] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-14 10:02:51,973 INFO: Dashboard loaded for user Test1
+2025-05-14 10:02:51,974 INFO: 172.20.10.1 - - [14/May/2025 10:02:51] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 10:03:02,732 INFO: 172.20.10.1 - - [14/May/2025 10:03:02] "GET /profile HTTP/1.1" 200 -
+2025-05-14 10:03:02,859 INFO: 172.20.10.1 - - [14/May/2025 10:03:02] "[36mGET /static/uploads/2_IMG_0816.jpeg HTTP/1.1[0m" 304 -
+2025-05-14 10:03:24,077 INFO: Profile updated for user Test1
+2025-05-14 10:03:24,081 INFO: 172.20.10.1 - - [14/May/2025 10:03:24] "[32mPOST /profile HTTP/1.1[0m" 302 -
+2025-05-14 10:03:24,157 INFO: 172.20.10.1 - - [14/May/2025 10:03:24] "GET /profile HTTP/1.1" 200 -
+2025-05-14 10:03:24,387 INFO: 172.20.10.1 - - [14/May/2025 10:03:24] "GET /static/uploads/2_IMG_0850.jpeg HTTP/1.1" 200 -
+2025-05-14 10:03:31,995 INFO: Dashboard loaded for user Test1
+2025-05-14 10:03:31,997 INFO: 172.20.10.1 - - [14/May/2025 10:03:31] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 10:24:55,761 INFO: Tracked tiktok link click for task 1 by user TEST1
+2025-05-14 10:24:55,762 INFO: 127.0.0.1 - - [14/May/2025 10:24:55] "[35m[1mPOST /track_link/1/tiktok HTTP/1.1[0m" 204 -
+2025-05-14 10:24:59,748 INFO: Tracked instagram link click for task 1 by user TEST1
+2025-05-14 10:24:59,749 INFO: 127.0.0.1 - - [14/May/2025 10:24:59] "[35m[1mPOST /track_link/1/instagram HTTP/1.1[0m" 204 -
+2025-05-14 10:25:03,422 INFO: Tracked youtube link click for task 1 by user TEST1
+2025-05-14 10:25:03,423 INFO: 127.0.0.1 - - [14/May/2025 10:25:03] "[35m[1mPOST /track_link/1/youtube HTTP/1.1[0m" 204 -
+2025-05-14 10:25:06,687 INFO: Task 1 completed by user TEST1, earned GH\u20b520.0
+2025-05-14 10:25:06,689 INFO: 127.0.0.1 - - [14/May/2025 10:25:06] "[32mPOST /complete_task/1 HTTP/1.1[0m" 302 -
+2025-05-14 10:25:06,720 INFO: Dashboard loaded for user TEST1
+2025-05-14 10:25:06,724 INFO: 127.0.0.1 - - [14/May/2025 10:25:06] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 10:25:06,799 INFO: 127.0.0.1 - - [14/May/2025 10:25:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 10:30:14,501 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-14 10:30:14,750 INFO:  * Restarting with stat
+2025-05-14 10:30:16,707 WARNING:  * Debugger is active!
+2025-05-14 10:30:16,711 INFO:  * Debugger PIN: 406-543-785
+2025-05-14 10:33:59,510 INFO: 127.0.0.1 - - [14/May/2025 10:33:59] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-14 10:33:59,545 INFO: 127.0.0.1 - - [14/May/2025 10:33:59] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-05-14 10:33:59,597 INFO: 127.0.0.1 - - [14/May/2025 10:33:59] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 10:34:21,485 ERROR: Login error: (sqlite3.OperationalError) no such column: user.registered_at
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin, user.registered_at AS user_registered_at 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('TEST1', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-14 10:34:21,487 INFO: 127.0.0.1 - - [14/May/2025 10:34:21] "POST /login?next=/dashboard HTTP/1.1" 200 -
+2025-05-14 10:34:21,519 INFO: 127.0.0.1 - - [14/May/2025 10:34:21] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 10:34:52,111 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.10.2:5000
+2025-05-14 10:34:52,112 INFO: [33mPress CTRL+C to quit[0m
+2025-05-14 10:34:52,114 INFO:  * Restarting with stat
+2025-05-14 10:34:53,398 WARNING:  * Debugger is active!
+2025-05-14 10:34:53,400 INFO:  * Debugger PIN: 406-543-785
+2025-05-14 10:34:58,395 INFO: The CSRF token is invalid.
+2025-05-14 10:34:58,411 INFO: 127.0.0.1 - - [14/May/2025 10:34:58] "POST /login?next=/dashboard HTTP/1.1" 200 -
+2025-05-14 10:34:58,463 INFO: 127.0.0.1 - - [14/May/2025 10:34:58] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 10:35:04,918 INFO: 127.0.0.1 - - [14/May/2025 10:35:04] "GET / HTTP/1.1" 200 -
+2025-05-14 10:35:04,973 INFO: 127.0.0.1 - - [14/May/2025 10:35:04] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 10:35:06,985 INFO: 127.0.0.1 - - [14/May/2025 10:35:06] "GET /register HTTP/1.1" 200 -
+2025-05-14 10:35:07,028 INFO: 127.0.0.1 - - [14/May/2025 10:35:07] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 10:35:22,273 INFO: User Nti registered successfully
+2025-05-14 10:35:22,275 INFO: 127.0.0.1 - - [14/May/2025 10:35:22] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-14 10:35:22,286 INFO: 127.0.0.1 - - [14/May/2025 10:35:22] "GET /login HTTP/1.1" 200 -
+2025-05-14 10:35:22,366 INFO: 127.0.0.1 - - [14/May/2025 10:35:22] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 10:35:31,507 INFO: User Nti logged in successfully
+2025-05-14 10:35:31,508 INFO: 127.0.0.1 - - [14/May/2025 10:35:31] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-14 10:35:31,569 INFO: Dashboard loaded for user Nti, day 1
+2025-05-14 10:35:31,676 INFO: 127.0.0.1 - - [14/May/2025 10:35:31] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 10:35:31,769 INFO: 127.0.0.1 - - [14/May/2025 10:35:31] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 10:36:10,913 INFO: Tracked tiktok link click for task 1 by user Nti
+2025-05-14 10:36:10,914 INFO: 127.0.0.1 - - [14/May/2025 10:36:10] "[35m[1mPOST /track_link/1/tiktok HTTP/1.1[0m" 204 -
+2025-05-14 10:36:15,816 INFO: Tracked instagram link click for task 1 by user Nti
+2025-05-14 10:36:15,817 INFO: 127.0.0.1 - - [14/May/2025 10:36:15] "[35m[1mPOST /track_link/1/instagram HTTP/1.1[0m" 204 -
+2025-05-14 10:36:21,502 INFO: Tracked youtube link click for task 1 by user Nti
+2025-05-14 10:36:21,503 INFO: 127.0.0.1 - - [14/May/2025 10:36:21] "[35m[1mPOST /track_link/1/youtube HTTP/1.1[0m" 204 -
+2025-05-14 10:36:27,843 INFO: Task 1 completed by user Nti, earned GH\u20b520.0
+2025-05-14 10:36:27,844 INFO: 127.0.0.1 - - [14/May/2025 10:36:27] "[32mPOST /complete_task/1 HTTP/1.1[0m" 302 -
+2025-05-14 10:36:27,887 INFO: Dashboard loaded for user Nti, day 1
+2025-05-14 10:36:27,895 INFO: 127.0.0.1 - - [14/May/2025 10:36:27] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 10:36:27,977 INFO: 127.0.0.1 - - [14/May/2025 10:36:27] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 10:36:55,911 INFO: Tracked tiktok link click for task 1 by user Nti
+2025-05-14 10:36:55,912 INFO: 127.0.0.1 - - [14/May/2025 10:36:55] "[35m[1mPOST /track_link/1/tiktok HTTP/1.1[0m" 204 -
+2025-05-14 10:37:00,715 INFO: Tracked instagram link click for task 1 by user Nti
+2025-05-14 10:37:00,716 INFO: 127.0.0.1 - - [14/May/2025 10:37:00] "[35m[1mPOST /track_link/1/instagram HTTP/1.1[0m" 204 -
+2025-05-14 10:37:04,754 INFO: Tracked youtube link click for task 1 by user Nti
+2025-05-14 10:37:04,755 INFO: 127.0.0.1 - - [14/May/2025 10:37:04] "[35m[1mPOST /track_link/1/youtube HTTP/1.1[0m" 204 -
+2025-05-14 10:37:08,832 INFO: 127.0.0.1 - - [14/May/2025 10:37:08] "[32mPOST /complete_task/1 HTTP/1.1[0m" 302 -
+2025-05-14 10:37:08,865 INFO: Dashboard loaded for user Nti, day 1
+2025-05-14 10:37:08,871 INFO: 127.0.0.1 - - [14/May/2025 10:37:08] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 10:37:08,924 INFO: 127.0.0.1 - - [14/May/2025 10:37:08] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 10:50:18,799 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-14 10:50:18,965 INFO:  * Restarting with stat
+2025-05-14 10:50:20,708 WARNING:  * Debugger is active!
+2025-05-14 10:50:20,712 INFO:  * Debugger PIN: 406-543-785
+2025-05-14 10:50:32,160 INFO: 127.0.0.1 - - [14/May/2025 10:50:32] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-14 10:50:32,200 INFO: 127.0.0.1 - - [14/May/2025 10:50:32] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-05-14 10:50:32,263 INFO: 127.0.0.1 - - [14/May/2025 10:50:32] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 10:50:44,265 WARNING: Failed login attempt for username: TEST1
+2025-05-14 10:50:44,267 INFO: 127.0.0.1 - - [14/May/2025 10:50:44] "POST /login?next=/dashboard HTTP/1.1" 200 -
+2025-05-14 10:50:44,325 INFO: 127.0.0.1 - - [14/May/2025 10:50:44] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 10:50:46,349 INFO: 127.0.0.1 - - [14/May/2025 10:50:46] "GET /register HTTP/1.1" 200 -
+2025-05-14 10:50:46,394 INFO: 127.0.0.1 - - [14/May/2025 10:50:46] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 10:51:02,195 INFO: 127.0.0.1 - - [14/May/2025 10:51:02] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-14 10:51:02,203 INFO: 127.0.0.1 - - [14/May/2025 10:51:02] "GET /register HTTP/1.1" 200 -
+2025-05-14 10:51:02,244 INFO: 127.0.0.1 - - [14/May/2025 10:51:02] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 10:51:04,279 INFO: 127.0.0.1 - - [14/May/2025 10:51:04] "GET /login HTTP/1.1" 200 -
+2025-05-14 10:51:04,323 INFO: 127.0.0.1 - - [14/May/2025 10:51:04] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 10:51:12,220 INFO: User Nti logged in successfully
+2025-05-14 10:51:12,221 INFO: 127.0.0.1 - - [14/May/2025 10:51:12] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-14 10:51:12,253 ERROR: Dashboard error: type object 'datetime.timezone' has no attribute 'UTC'
+2025-05-14 10:51:12,255 INFO: 127.0.0.1 - - [14/May/2025 10:51:12] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-14 10:51:12,271 INFO: 127.0.0.1 - - [14/May/2025 10:51:12] "GET / HTTP/1.1" 200 -
+2025-05-14 10:51:12,337 INFO: 127.0.0.1 - - [14/May/2025 10:51:12] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 10:51:25,052 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-14 10:51:25,305 INFO:  * Restarting with stat
+2025-05-14 10:51:26,946 WARNING:  * Debugger is active!
+2025-05-14 10:51:26,951 INFO:  * Debugger PIN: 406-543-785
+2025-05-14 10:51:30,870 INFO: 127.0.0.1 - - [14/May/2025 10:51:30] "GET / HTTP/1.1" 200 -
+2025-05-14 10:51:30,929 INFO: 127.0.0.1 - - [14/May/2025 10:51:30] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 10:51:33,029 INFO: 127.0.0.1 - - [14/May/2025 10:51:33] "GET /login HTTP/1.1" 200 -
+2025-05-14 10:51:33,097 INFO: 127.0.0.1 - - [14/May/2025 10:51:33] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 10:51:41,157 INFO: User Nti logged in successfully
+2025-05-14 10:51:41,158 INFO: 127.0.0.1 - - [14/May/2025 10:51:41] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-14 10:51:41,198 INFO: Dashboard loaded for user Nti, day 1
+2025-05-14 10:51:41,265 INFO: 127.0.0.1 - - [14/May/2025 10:51:41] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 10:51:41,353 INFO: 127.0.0.1 - - [14/May/2025 10:51:41] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 10:55:59,795 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-14 10:55:59,986 INFO:  * Restarting with stat
+2025-05-14 10:56:01,673 WARNING:  * Debugger is active!
+2025-05-14 10:56:01,680 INFO:  * Debugger PIN: 406-543-785
+2025-05-14 10:56:04,902 INFO: 127.0.0.1 - - [14/May/2025 10:56:04] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-14 10:56:04,927 INFO: 127.0.0.1 - - [14/May/2025 10:56:04] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-05-14 10:56:04,991 INFO: 127.0.0.1 - - [14/May/2025 10:56:04] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 10:56:08,493 INFO: 127.0.0.1 - - [14/May/2025 10:56:08] "GET /register HTTP/1.1" 200 -
+2025-05-14 10:56:08,546 INFO: 127.0.0.1 - - [14/May/2025 10:56:08] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 10:56:34,765 ERROR: Registration error: (sqlite3.OperationalError) no such column: user.password
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password AS user_password, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin, user.registered_at AS user_registered_at 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('test1', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-14 10:56:34,766 INFO: 127.0.0.1 - - [14/May/2025 10:56:34] "POST /register HTTP/1.1" 200 -
+2025-05-14 10:56:34,812 INFO: 127.0.0.1 - - [14/May/2025 10:56:34] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 10:57:48,861 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.10.2:5000
+2025-05-14 10:57:48,862 INFO: [33mPress CTRL+C to quit[0m
+2025-05-14 10:57:48,864 INFO:  * Restarting with stat
+2025-05-14 10:57:50,114 WARNING:  * Debugger is active!
+2025-05-14 10:57:50,116 INFO:  * Debugger PIN: 406-543-785
+2025-05-14 10:58:01,902 INFO: 127.0.0.1 - - [14/May/2025 10:58:01] "GET / HTTP/1.1" 200 -
+2025-05-14 10:58:01,959 INFO: 127.0.0.1 - - [14/May/2025 10:58:01] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 10:58:05,012 INFO: 127.0.0.1 - - [14/May/2025 10:58:05] "GET /register HTTP/1.1" 200 -
+2025-05-14 10:58:05,085 INFO: 127.0.0.1 - - [14/May/2025 10:58:05] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 10:58:18,237 INFO: User Nti registered successfully
+2025-05-14 10:58:18,238 INFO: 127.0.0.1 - - [14/May/2025 10:58:18] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-14 10:58:18,254 INFO: 127.0.0.1 - - [14/May/2025 10:58:18] "GET /login HTTP/1.1" 200 -
+2025-05-14 10:58:18,340 INFO: 127.0.0.1 - - [14/May/2025 10:58:18] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 10:58:29,609 INFO: User Nti logged in successfully
+2025-05-14 10:58:29,609 INFO: 127.0.0.1 - - [14/May/2025 10:58:29] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-14 10:58:29,695 INFO: Dashboard loaded for user Nti, day 1
+2025-05-14 10:58:29,779 INFO: 127.0.0.1 - - [14/May/2025 10:58:29] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 10:58:30,121 INFO: 127.0.0.1 - - [14/May/2025 10:58:30] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 11:46:06,563 INFO: 172.20.10.1 - - [14/May/2025 11:46:06] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-14 11:46:06,595 INFO: 172.20.10.1 - - [14/May/2025 11:46:06] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-05-14 11:46:32,641 INFO: User Nti logged in successfully
+2025-05-14 11:46:32,643 INFO: 172.20.10.1 - - [14/May/2025 11:46:32] "[32mPOST /login?next=/dashboard HTTP/1.1[0m" 302 -
+2025-05-14 11:46:32,693 INFO: Dashboard loaded for user Nti, day 1
+2025-05-14 11:46:32,696 INFO: 172.20.10.1 - - [14/May/2025 11:46:32] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 11:46:54,894 INFO: 172.20.10.1 - - [14/May/2025 11:46:54] "GET /profile HTTP/1.1" 200 -
+2025-05-14 11:46:54,968 INFO: 172.20.10.1 - - [14/May/2025 11:46:54] "[36mGET /static/uploads/2_IMG_0816.jpeg HTTP/1.1[0m" 304 -
+2025-05-14 11:47:02,968 INFO: Dashboard loaded for user Nti, day 1
+2025-05-14 11:47:02,969 INFO: 172.20.10.1 - - [14/May/2025 11:47:02] "GET /dashboard HTTP/1.1" 200 -
+2025-05-14 11:48:22,804 INFO: User Nti logged out
+2025-05-14 11:48:22,805 INFO: 127.0.0.1 - - [14/May/2025 11:48:22] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-14 11:48:22,819 INFO: 127.0.0.1 - - [14/May/2025 11:48:22] "GET / HTTP/1.1" 200 -
+2025-05-14 11:48:22,889 INFO: 127.0.0.1 - - [14/May/2025 11:48:22] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 11:48:25,637 INFO: 127.0.0.1 - - [14/May/2025 11:48:25] "GET /register HTTP/1.1" 200 -
+2025-05-14 11:48:25,710 INFO: 127.0.0.1 - - [14/May/2025 11:48:25] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 11:49:15,145 INFO: 127.0.0.1 - - [14/May/2025 11:49:15] "GET /register HTTP/1.1" 200 -
+2025-05-14 11:49:15,198 INFO: 127.0.0.1 - - [14/May/2025 11:49:15] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-14 11:49:40,974 INFO: 172.20.10.1 - - [14/May/2025 11:49:40] "[32mPOST /withdraw HTTP/1.1[0m" 302 -
+2025-05-14 11:49:41,014 INFO: Dashboard loaded for user Nti, day 1
+2025-05-14 11:49:41,016 INFO: 172.20.10.1 - - [14/May/2025 11:49:41] "GET /dashboard HTTP/1.1" 200 -
+2025-05-18 12:27:45,393 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.10.3:5000
+2025-05-18 12:27:45,394 INFO: [33mPress CTRL+C to quit[0m
+2025-05-18 12:27:45,398 INFO:  * Restarting with stat
+2025-05-18 12:27:47,649 WARNING:  * Debugger is active!
+2025-05-18 12:27:47,663 INFO:  * Debugger PIN: 695-393-602
+2025-05-18 12:28:29,186 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-18 12:28:29,454 INFO:  * Restarting with stat
+2025-05-18 12:28:32,314 WARNING:  * Debugger is active!
+2025-05-18 12:28:32,318 INFO:  * Debugger PIN: 695-393-602
+2025-05-18 12:30:34,170 INFO: 172.20.10.1 - - [18/May/2025 12:30:34] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-18 12:30:34,317 INFO: 172.20.10.1 - - [18/May/2025 12:30:34] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-05-18 12:30:36,754 INFO: 172.20.10.1 - - [18/May/2025 12:30:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-18 12:30:39,950 INFO: 172.20.10.1 - - [18/May/2025 12:30:39] "GET /register HTTP/1.1" 200 -
+2025-05-18 12:31:02,659 INFO: User Emma registered successfully
+2025-05-18 12:31:02,660 INFO: 172.20.10.1 - - [18/May/2025 12:31:02] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-18 12:31:02,720 INFO: 172.20.10.1 - - [18/May/2025 12:31:02] "GET /login HTTP/1.1" 200 -
+2025-05-18 12:31:07,237 INFO: User Emma logged in successfully
+2025-05-18 12:31:07,238 INFO: 172.20.10.1 - - [18/May/2025 12:31:07] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-18 12:31:07,326 INFO: Dashboard loaded for user Emma, day 1
+2025-05-18 12:31:07,561 INFO: 172.20.10.1 - - [18/May/2025 12:31:07] "GET /dashboard HTTP/1.1" 200 -
+2025-05-18 12:31:15,891 INFO: Tracked tiktok link click for task 1 by user Emma
+2025-05-18 12:31:15,892 INFO: 172.20.10.1 - - [18/May/2025 12:31:15] "[35m[1mPOST /track_link/1/tiktok HTTP/1.1[0m" 204 -
+2025-05-18 12:36:36,384 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-18 12:36:36,828 INFO:  * Restarting with stat
+2025-05-18 12:36:40,507 WARNING:  * Debugger is active!
+2025-05-18 12:36:40,513 INFO:  * Debugger PIN: 695-393-602
+2025-05-18 12:47:13,054 INFO: 127.0.0.1 - - [18/May/2025 12:47:13] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-18 12:47:13,106 INFO: 127.0.0.1 - - [18/May/2025 12:47:13] "GET /login?next=/logout HTTP/1.1" 200 -
+2025-05-18 17:53:52,291 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.10.3:5000
+2025-05-18 17:53:52,293 INFO: [33mPress CTRL+C to quit[0m
+2025-05-18 17:53:52,296 INFO:  * Restarting with stat
+2025-05-18 17:53:54,639 WARNING:  * Debugger is active!
+2025-05-18 17:53:54,643 INFO:  * Debugger PIN: 695-393-602
