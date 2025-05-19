@@ -65,3 +65,76 @@
 2025-05-19 13:52:10,483 INFO: 127.0.0.1 - - [19/May/2025 13:52:10] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
 2025-05-19 14:08:08,790 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
 2025-05-19 14:08:08,955 INFO:  * Restarting with stat
+2025-05-19 14:11:16,672 DEBUG: Loading user: user_id=1, user_found=True
+2025-05-19 14:11:16,691 DEBUG: Processing task 1 for user Nti
+2025-05-19 14:11:16,695 INFO: Dashboard loaded for user Nti, day 1
+2025-05-19 14:11:16,759 INFO: 127.0.0.1 - - [19/May/2025 14:11:16] "GET /dashboard HTTP/1.1" 200 -
+2025-05-19 14:11:16,811 INFO: 127.0.0.1 - - [19/May/2025 14:11:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-19 14:11:19,371 DEBUG: Loading user: user_id=1, user_found=True
+2025-05-19 14:11:19,371 INFO: User Nti logged out
+2025-05-19 14:11:19,373 INFO: 127.0.0.1 - - [19/May/2025 14:11:19] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-19 14:11:19,392 INFO: 127.0.0.1 - - [19/May/2025 14:11:19] "GET / HTTP/1.1" 200 -
+2025-05-19 14:11:19,458 INFO: 127.0.0.1 - - [19/May/2025 14:11:19] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-19 14:11:22,335 INFO: 127.0.0.1 - - [19/May/2025 14:11:22] "GET /register HTTP/1.1" 200 -
+2025-05-19 14:11:22,399 INFO: 127.0.0.1 - - [19/May/2025 14:11:22] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-19 14:11:48,181 INFO: User new registered successfully
+2025-05-19 14:11:48,182 INFO: 127.0.0.1 - - [19/May/2025 14:11:48] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-19 14:11:48,204 INFO: 127.0.0.1 - - [19/May/2025 14:11:48] "GET /login HTTP/1.1" 200 -
+2025-05-19 14:11:48,277 INFO: 127.0.0.1 - - [19/May/2025 14:11:48] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-19 14:11:57,253 DEBUG: Login attempt: username=new, user_found=True
+2025-05-19 14:11:57,253 DEBUG: Password provided=0207108092, stored=0207108092
+2025-05-19 14:11:57,255 INFO: User new logged in successfully
+2025-05-19 14:11:57,258 INFO: 127.0.0.1 - - [19/May/2025 14:11:57] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-19 14:11:57,269 DEBUG: Loading user: user_id=2, user_found=True
+2025-05-19 14:11:57,292 DEBUG: Processing task 1 for user new
+2025-05-19 14:11:57,292 INFO: Dashboard loaded for user new, day 1
+2025-05-19 14:11:57,295 INFO: 127.0.0.1 - - [19/May/2025 14:11:57] "GET /dashboard HTTP/1.1" 200 -
+2025-05-19 14:11:57,383 INFO: 127.0.0.1 - - [19/May/2025 14:11:57] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-19 14:42:21,236 DEBUG: Loading user: user_id=2, user_found=True
+2025-05-19 14:42:21,258 DEBUG: Processing task 1 for user new
+2025-05-19 14:42:21,260 INFO: Dashboard loaded for user new, day 1
+2025-05-19 14:42:21,262 INFO: 127.0.0.1 - - [19/May/2025 14:42:21] "GET /dashboard HTTP/1.1" 200 -
+2025-05-19 14:42:21,336 INFO: 127.0.0.1 - - [19/May/2025 14:42:21] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-19 14:42:29,532 DEBUG: Loading user: user_id=2, user_found=True
+2025-05-19 14:42:29,547 DEBUG: Processing task 1 for user new
+2025-05-19 14:42:29,548 INFO: Dashboard loaded for user new, day 1
+2025-05-19 14:42:29,550 INFO: 127.0.0.1 - - [19/May/2025 14:42:29] "GET /dashboard HTTP/1.1" 200 -
+2025-05-19 14:42:29,605 INFO: 127.0.0.1 - - [19/May/2025 14:42:29] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-19 14:43:49,639 DEBUG: Loading user: user_id=2, user_found=True
+2025-05-19 14:43:49,664 DEBUG: Processing task 1 for user new
+2025-05-19 14:43:49,672 INFO: Dashboard loaded for user new, day 1
+2025-05-19 14:43:49,674 INFO: 127.0.0.1 - - [19/May/2025 14:43:49] "GET /dashboard HTTP/1.1" 200 -
+2025-05-19 14:43:49,735 INFO: 127.0.0.1 - - [19/May/2025 14:43:49] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-19 14:43:51,322 DEBUG: Loading user: user_id=2, user_found=True
+2025-05-19 14:43:51,337 DEBUG: Processing task 1 for user new
+2025-05-19 14:43:51,337 INFO: Dashboard loaded for user new, day 1
+2025-05-19 14:43:51,339 INFO: 127.0.0.1 - - [19/May/2025 14:43:51] "GET /dashboard HTTP/1.1" 200 -
+2025-05-19 14:43:51,404 INFO: 127.0.0.1 - - [19/May/2025 14:43:51] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-19 14:45:21,727 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.10.2:5000
+2025-05-19 14:45:21,727 INFO: [33mPress CTRL+C to quit[0m
+2025-05-19 14:45:26,482 INFO: 127.0.0.1 - - [19/May/2025 14:45:26] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-19 14:45:26,508 INFO: 127.0.0.1 - - [19/May/2025 14:45:26] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-05-19 14:45:26,571 INFO: 127.0.0.1 - - [19/May/2025 14:45:26] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-19 14:45:37,967 ERROR: Login error: (sqlite3.OperationalError) no such table: user
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password AS user_password, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin, user.registered_at AS user_registered_at 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('new', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-19 14:45:37,968 INFO: 127.0.0.1 - - [19/May/2025 14:45:37] "POST /login?next=/dashboard HTTP/1.1" 200 -
+2025-05-19 14:45:38,027 INFO: 127.0.0.1 - - [19/May/2025 14:45:38] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-19 14:46:00,603 INFO: 127.0.0.1 - - [19/May/2025 14:46:00] "GET /register HTTP/1.1" 200 -
+2025-05-19 14:46:00,660 INFO: 127.0.0.1 - - [19/May/2025 14:46:00] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-19 14:46:25,683 ERROR: Registration error: (sqlite3.OperationalError) no such table: user
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password AS user_password, user.balance AS user_balance, user.profile_picture AS user_profile_picture, user.is_admin AS user_is_admin, user.registered_at AS user_registered_at 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('AMA', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-05-19 14:46:25,686 INFO: 127.0.0.1 - - [19/May/2025 14:46:25] "POST /register HTTP/1.1" 200 -
+2025-05-19 14:46:25,734 INFO: 127.0.0.1 - - [19/May/2025 14:46:25] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -

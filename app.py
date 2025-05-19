@@ -11,15 +11,14 @@ import logging
 from datetime import timezone
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY', 'f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(os.path.dirname(__file__), 'site.db')
+app.config['SECRET_KEY'] = 'your-fixed-secret-key-here'  # Replace with a secure, static key
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
 app.config['ALLOWED_EXTENSIONS'] = {'png', 'jpg', 'jpeg'}
 db = SQLAlchemy(app)
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
-
 # Setup logging
 logging.basicConfig(filename='app.log', level=logging.DEBUG, format='%(asctime)s %(levelname)s: %(message)s')
 
@@ -184,7 +183,7 @@ def dashboard():
     all_tasks = [
         {
             'id': 1,
-            'name': 'Social Media Engagement 1',
+            'name': 'Make sure to like more than 5 videos where possible ',
             'description': 'Follow, like, and comment on the specified TikTok, Instagram, and YouTube accounts.',
             'reward': 20.0,
             'details': {
@@ -506,5 +505,6 @@ def admin_withdrawals():
         return redirect(url_for('dashboard'))
 
 if __name__ == '__main__':
-    port = int(os.getenv('PORT', 5000))
-    app.run(host='0.0.0.0', port=port, debug=False)
+    with app.app_context():
+        db.create_all()
+    app.run(host='0.0.0.0', port=5000, debug=True)
