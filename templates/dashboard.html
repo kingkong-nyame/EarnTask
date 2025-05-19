@@ -119,7 +119,18 @@
                             {% if task.id == 7 %}
                                 <input type="hidden" name="cipher_solution" id="cipher-solution-hidden-{{ task.id }}">
                             {% endif %}
-                            <button type="submit" id="complete-task-{{ task.id }}" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 {% if task.id in [1, 2, 3, 4, 5, 6] and not (task.status.get('tiktok_clicked', True) and task.status.get('instagram_clicked', True) and task.status.get('youtube_clicked', True) and task.status.get('twitter_clicked', True) and task.status.get('linkedin_clicked', True) and task.status.get('snapchat_clicked', True)) %} disabled:opacity-50 disabled:cursor-not-allowed {% endif %}" {% if task.id in [1, 2, 3, 4, 5, 6] and not (task.status.get('tiktok_clicked', True) and task.status.get('instagram_clicked', True) and task.status.get('youtube_clicked', True) and task.status.get('twitter_clicked', True) and task.status.get('linkedin_clicked', True) and task.status.get('snapchat_clicked', True)) %} disabled {% endif %} onclick="if ({{ task.id }} == 7) document.getElementById('cipher-solution-hidden-{{ task.id }}').value = document.getElementById('cipher-solution-{{ task.id }}').value;" {% if task.status.completed %} disabled {% endif %}>Complete Task</button>
+                            <button type="submit" id="complete-task-{{ task.id }}" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700
+                                {% if task.id == 1 and not (task.status.tiktok_clicked and task.status.instagram_clicked and task.status.youtube_clicked) %} disabled:opacity-50 disabled:cursor-not-allowed disabled
+                                {% elif task.id == 2 and not (task.status.tiktok_clicked and task.status.instagram_clicked and task.status.youtube_clicked) %} disabled:opacity-50 disabled:cursor-not-allowed disabled
+                                {% elif task.id == 3 and not (task.status.twitter_clicked and task.status.instagram_clicked and task.status.tiktok_clicked) %} disabled:opacity-50 disabled:cursor-not-allowed disabled
+                                {% elif task.id == 4 and not (task.status.twitter_clicked and task.status.tiktok_clicked and task.status.youtube_clicked) %} disabled:opacity-50 disabled:cursor-not-allowed disabled
+                                {% elif task.id == 5 and not (task.status.linkedin_clicked and task.status.instagram_clicked and task.status.youtube_clicked) %} disabled:opacity-50 disabled:cursor-not-allowed disabled
+                                {% elif task.id == 6 and not (task.status.telegram_clicked and task.status.instagram_clicked and task.status.youtube_clicked) %} disabled:opacity-50 disabled:cursor-not-allowed disabled
+                                {% endif %}
+                                {% if task.status.completed %} disabled {% endif %}"
+                                {% if task.id == 7 %} onclick="document.getElementById('cipher-solution-hidden-{{ task.id }}').value = document.getElementById('cipher-solution-{{ task.id }}').value;" {% endif %}>
+                                Complete Task
+                            </button>
                         </form>
                     </div>
                 {% endfor %}
@@ -173,8 +184,9 @@
                 headers: { 'Content-Type': 'application/json' }
             }).then(response => {
                 if (response.ok) {
-                    document.querySelector(`.social-link[data-task-id="${taskId}"][data-platform="${platform}"]`).classList.remove('bg-blue-500');
-                    document.querySelector(`.social-link[data-task-id="${taskId}"][data-platform="${platform}"]`).classList.add('bg-green-500');
+                    const link = document.querySelector(`.social-link[data-task-id="${taskId}"][data-platform="${platform}"]`);
+                    link.classList.remove('bg-blue-500');
+                    link.classList.add('bg-green-500');
                     if (taskId >= 1 && taskId <= 6) {
                         const task = document.querySelector(`#complete-task-${taskId}`);
                         const links = document.querySelectorAll(`.social-link[data-task-id="${taskId}"]`);
@@ -186,7 +198,7 @@
                         });
                         if (allClicked) {
                             task.disabled = false;
-                            task.classList.remove('opacity-50', 'cursor-not-allowed');
+                            task.classList.remove('opacity-50', 'cursor-not-allowed', 'disabled');
                         }
                     }
                 }

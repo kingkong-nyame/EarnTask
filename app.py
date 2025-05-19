@@ -4,13 +4,14 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, FloatField, SubmitField
 from wtforms.validators import DataRequired, EqualTo, Email
-from datetime import datetime, timedelta
+from datetime import datetime, UTC
 import os
 from werkzeug.utils import secure_filename
 import logging
+from datetime import timezone
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.urandom(24).hex()
+app.config['SECRET_KEY'] = 'your-fixed-secret-key-here'  # Replace with a secure, static key
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
@@ -25,6 +26,15 @@ logging.basicConfig(filename='app.log', level=logging.DEBUG, format='%(asctime)s
 # Ensure upload folder exists
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
+# Helper function to ensure datetime is timezone-aware
+def ensure_aware(dt):
+    if dt is None:
+        return None
+    if dt.tzinfo is None:
+        # Assume naive datetimes are UTC and make them aware
+        return dt.replace(tzinfo=UTC)
+    return dt
+
 # Database Models
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -34,7 +44,7 @@ class User(UserMixin, db.Model):
     balance = db.Column(db.Float, default=0.0)
     profile_picture = db.Column(db.String(120), nullable=True)
     is_admin = db.Column(db.Boolean, default=False)
-    registered_at = db.Column(db.DateTime, default=datetime.utcnow)
+    registered_at = db.Column(db.DateTime, default=lambda: datetime.now(UTC))
     tasks = db.relationship('UserTask', backref='user', lazy=True)
     withdrawals = db.relationship('Withdrawal', backref='user', lazy=True)
 
@@ -56,13 +66,14 @@ class UserTask(db.Model):
     twitter_clicked = db.Column(db.Boolean, default=False)
     linkedin_clicked = db.Column(db.Boolean, default=False)
     snapchat_clicked = db.Column(db.Boolean, default=False)
+    telegram_clicked = db.Column(db.Boolean, default=False)
 
 class Withdrawal(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     amount = db.Column(db.Float, nullable=False)
     status = db.Column(db.String(20), default='pending')
-    requested_at = db.Column(db.DateTime, default=datetime.utcnow)
+    requested_at = db.Column(db.DateTime, default=lambda: datetime.now(UTC))
 
 # WTForms
 class RegisterForm(FlaskForm):
@@ -90,7 +101,9 @@ class WithdrawForm(FlaskForm):
 @login_manager.user_loader
 def load_user(user_id):
     try:
-        return db.session.get(User, int(user_id))
+        user = db.session.get(User, int(user_id))
+        logging.debug(f"Loading user: user_id={user_id}, user_found={user is not None}")
+        return user
     except Exception as e:
         logging.error(f"Error loading user {user_id}: {str(e)}")
         return None
@@ -122,7 +135,7 @@ def register():
                 password=password,  # Store plain text password
                 balance=5.0,
                 is_admin=(username == 'admin'),
-                registered_at=datetime.utcnow()
+                registered_at=datetime.now(UTC)
             )
             db.session.add(user)
             db.session.commit()
@@ -143,7 +156,10 @@ def login():
             username = form.username.data
             password = form.password.data
             user = User.query.filter_by(username=username).first()
-            if user and user.password == password:  # Direct comparison
+            logging.debug(f"Login attempt: username={username}, user_found={user is not None}")
+            if user:
+                logging.debug(f"Password provided={password}, stored={user.password}")
+            if user and user.password == password:
                 login_user(user)
                 logging.info(f"User {user.username} logged in successfully")
                 return redirect(url_for('dashboard'))
@@ -191,7 +207,7 @@ def dashboard():
         {
             'id': 3,
             'name': 'Social Media Engagement 3',
-            'description': 'Follow, like, and comment on the specified Twitter, Instagram, and YouTube accounts.',
+            'description': 'Follow, like, and comment on the specified Twitter, Instagram, and TikTok accounts.',
             'reward': 20.0,
             'details': {
                 'twitter': {'url': 'https://x.com/emjudecoding?s=21', 'actions': 'Follow, like, and comment on the latest tweet'},
@@ -205,8 +221,8 @@ def dashboard():
             'description': 'Follow, like, and comment on the specified Twitter, TikTok, and YouTube accounts.',
             'reward': 20.0,
             'details': {
+                'twitter': {'url': 'https://x.com/emjudecoding?s=21', 'actions': 'Follow, like, and comment on the latest tweet'},
                 'tiktok': {'url': 'https://www.tiktok.com/@footprintfx1?_t=ZM-8wST45939eB&_r=1', 'actions': 'Follow, like, and comment on the latest video'},
-                'tiktok': {'url': 'https://www.tiktok.com/@vintage_vogue_legacy?_t=ZM-8wSc9rWjQu7&_r=1', 'actions': 'Follow, like, and comment on the latest video'},
                 'youtube': {'url': 'http://www.youtube.com/@alphahaze4506', 'actions': 'Like, comment, and subscribe to the channel'}
             }
         },
@@ -224,7 +240,7 @@ def dashboard():
         {
             'id': 6,
             'name': 'Social Media Engagement 6',
-            'description': 'Follow, like, and comment on the specified Snapchat, Instagram, and YouTube accounts.',
+            'description': 'Follow, like, and comment on the specified Telegram, Instagram, and YouTube accounts.',
             'reward': 20.0,
             'details': {
                 'telegram': {'url': 'https://t.me/onestopgoodies', 'actions': 'Follow, like, and comment on the latest story'},
@@ -262,7 +278,8 @@ def dashboard():
         db.session.commit()
 
         # Calculate current day since registration (1-based)
-        days_since_registration = (datetime.utcnow() - current_user.registered_at).days + 1
+        registered_at = ensure_aware(current_user.registered_at)
+        days_since_registration = (datetime.now(UTC) - registered_at).days + 1
         current_task_day = min(days_since_registration, 7)  # Cap at day 7
 
         # Filter tasks to show only the task for the current day
@@ -270,6 +287,7 @@ def dashboard():
         for task in all_tasks:
             if task['id'] == current_task_day:
                 user_task = UserTask.query.filter_by(user_id=current_user.id, task_id=task['id']).first()
+                logging.debug(f"Processing task {task['id']} for user {current_user.username}")
                 task['status'] = {
                     'completed': user_task.completed,
                     'tiktok_clicked': user_task.tiktok_clicked,
@@ -277,6 +295,7 @@ def dashboard():
                     'youtube_clicked': user_task.youtube_clicked,
                     'twitter_clicked': user_task.twitter_clicked,
                     'linkedin_clicked': user_task.linkedin_clicked,
+                    'snapchat_clicked': user_task.snapchat_clicked,
                     'telegram_clicked': user_task.telegram_clicked
                 }
                 tasks_to_show.append(task)
@@ -297,7 +316,7 @@ def dashboard():
         logging.info(f"Dashboard loaded for user {current_user.username}, day {current_task_day}")
         return render_template('dashboard.html', tasks=tasks_to_show, user=current_user, completed_tasks=completed_tasks, form=form, current_task_day=current_task_day)
     except Exception as e:
-        logging.error(f"Dashboard error: {str(e)}")
+        logging.error(f"Dashboard error for user {current_user.username}: {str(e)}", exc_info=True)
         flash('An error occurred while loading the dashboard. Please try again.')
         return redirect(url_for('index'))
 
@@ -318,7 +337,7 @@ def track_link(task_id, platform):
             elif platform == 'linkedin':
                 user_task.linkedin_clicked = True
             elif platform == 'telegram':
-                user_task.snapchat_clicked = True
+                user_task.telegram_clicked = True
             db.session.commit()
             logging.info(f"Tracked {platform} link click for task {task_id} by user {current_user.username}")
         return '', 204
@@ -342,23 +361,23 @@ def complete_task(task_id):
 
         if task_id in [1, 2]:
             if not (user_task.tiktok_clicked and user_task.instagram_clicked and user_task.youtube_clicked):
-                flash('You must click all social media links before completing this task!')
+                flash('You must perform all social media links before completing this task!')
                 return redirect(url_for('dashboard'))
         elif task_id == 3:
-            if not (user_task.twitter_clicked and user_task.instagram_clicked and user_task.youtube_clicked):
-                flash('You must click all social media links before completing this task!')
+            if not (user_task.twitter_clicked and user_task.instagram_clicked and user_task.tiktok_clicked):
+                flash('You must perform all social media links before completing this task!')
                 return redirect(url_for('dashboard'))
         elif task_id == 4:
             if not (user_task.twitter_clicked and user_task.tiktok_clicked and user_task.youtube_clicked):
-                flash('You must click all social media links before completing this task!')
+                flash('You must perform all social media links before completing this task!')
                 return redirect(url_for('dashboard'))
         elif task_id == 5:
             if not (user_task.linkedin_clicked and user_task.instagram_clicked and user_task.youtube_clicked):
-                flash('You must click all social media links before completing this task!')
+                flash('You must perform all social media links before completing this task!')
                 return redirect(url_for('dashboard'))
         elif task_id == 6:
-            if not (user_task.snapchat_clicked and user_task.instagram_clicked and user_task.youtube_clicked):
-                flash('You must click all social media links before completing this task!')
+            if not (user_task.telegram_clicked and user_task.instagram_clicked and user_task.youtube_clicked):
+                flash('You must perform all social media links before completing this task!')
                 return redirect(url_for('dashboard'))
         elif task_id == 7:
             cipher_solution = request.form.get('cipher_solution')
@@ -370,7 +389,7 @@ def complete_task(task_id):
             return redirect(url_for('dashboard'))
 
         user_task.completed = True
-        user_task.completed_at = datetime.utcnow()
+        user_task.completed_at = datetime.now(UTC)
         current_user.balance += task_rewards[task_id]
         db.session.commit()
         flash(f'Task completed! You earned GH₵{task_rewards[task_id]}')
@@ -396,8 +415,8 @@ def profile():
                     flash('Username updated successfully!')
 
             if form.current_password.data and form.new_password.data:
-                if current_user.password == form.current_password.data:  # Direct comparison
-                    current_user.password = form.new_password.data  # Direct update
+                if current_user.password == form.current_password.data:
+                    current_user.password = form.new_password.data
                     flash('Password updated successfully!')
                 else:
                     flash('Current password is incorrect!')
@@ -429,7 +448,6 @@ def withdraw():
     form = WithdrawForm()
     if form.validate_on_submit():
         try:
-            # Check if all 7 tasks are completed
             completed_tasks = UserTask.query.filter_by(user_id=current_user.id, completed=True).count()
             if completed_tasks < 7:
                 flash('You must complete all 7 tasks before withdrawing!')
@@ -490,5 +508,4 @@ def admin_withdrawals():
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
-    print("Starting Flask server at http://0.0.0.0:5000")
     app.run(host='0.0.0.0', port=5000, debug=True)
