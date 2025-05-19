@@ -11,7 +11,7 @@ import logging
 from datetime import timezone
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY', 'emjudecodingtech')
+app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY', 'f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(os.path.dirname(__file__), 'site.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
