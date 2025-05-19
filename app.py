@@ -11,8 +11,8 @@ import logging
 from datetime import timezone
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'your-fixed-secret-key-here'  # Replace with a secure, static key
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY', 'emjudecodingtech')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(os.path.dirname(__file__), 'site.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
 app.config['ALLOWED_EXTENSIONS'] = {'png', 'jpg', 'jpeg'}
@@ -506,6 +506,5 @@ def admin_withdrawals():
         return redirect(url_for('dashboard'))
 
 if __name__ == '__main__':
-    with app.app_context():
-        db.create_all()
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    port = int(os.getenv('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=False)

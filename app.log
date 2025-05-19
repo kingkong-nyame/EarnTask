@@ -49,3 +49,19 @@
 2025-05-19 13:50:08,463 INFO: 127.0.0.1 - - [19/May/2025 13:50:08] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
 2025-05-19 13:52:03,130 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
 2025-05-19 13:52:03,337 INFO:  * Restarting with stat
+2025-05-19 13:52:05,117 WARNING:  * Debugger is active!
+2025-05-19 13:52:05,119 INFO:  * Debugger PIN: 695-393-602
+2025-05-19 13:52:07,799 DEBUG: Loading user: user_id=1, user_found=True
+2025-05-19 13:52:07,818 DEBUG: Processing task 1 for user Nti
+2025-05-19 13:52:07,819 INFO: Dashboard loaded for user Nti, day 1
+2025-05-19 13:52:07,861 INFO: 127.0.0.1 - - [19/May/2025 13:52:07] "GET /dashboard HTTP/1.1" 200 -
+2025-05-19 13:52:07,911 INFO: 127.0.0.1 - - [19/May/2025 13:52:07] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-19 13:52:10,386 DEBUG: Loading user: user_id=1, user_found=True
+2025-05-19 13:52:10,388 INFO: 127.0.0.1 - - [19/May/2025 13:52:10] "[32mPOST /complete_task/1 HTTP/1.1[0m" 302 -
+2025-05-19 13:52:10,400 DEBUG: Loading user: user_id=1, user_found=True
+2025-05-19 13:52:10,414 DEBUG: Processing task 1 for user Nti
+2025-05-19 13:52:10,416 INFO: Dashboard loaded for user Nti, day 1
+2025-05-19 13:52:10,421 INFO: 127.0.0.1 - - [19/May/2025 13:52:10] "GET /dashboard HTTP/1.1" 200 -
+2025-05-19 13:52:10,483 INFO: 127.0.0.1 - - [19/May/2025 13:52:10] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-05-19 14:08:08,790 INFO:  * Detected change in 'c:\\Users\\Emjude\\Desktop\\TaskEarn\\app.py', reloading
+2025-05-19 14:08:08,955 INFO:  * Restarting with stat
